@@ -1,4 +1,4 @@
-/**
+/*
  * Author: Aiden Walmer
  * Date: 9/29/22
  * Description: Secure Login, using username and password
