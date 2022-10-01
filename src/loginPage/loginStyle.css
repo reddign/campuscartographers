@@ -46,10 +46,7 @@ label {
     padding-left: 149px;             /* place forgotPassword to the rightside of the div */
 }
 
-/* HyperLink Modifyers */
-a:link {
-    color: black;
-} 
+/* HyperLink Modifiers */
 a:hover {
     color: #5CB8E4;
 }
