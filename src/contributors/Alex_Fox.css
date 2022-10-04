@@ -1,9 +1,14 @@
+table{
+    background-image: linear-gradient(to top, #47B5FF, rgb(150, 150, 150));
+    padding-bottom: 300px;
+}
+
 h1{
     font-size: 50px;
     text-align: center;
 }
 header{
-    background-color: royalblue;
+    background-image: linear-gradient(to bottom, rgb(50, 50, 50), rgb(150,150,150));
     padding: 25px;
 }
 
