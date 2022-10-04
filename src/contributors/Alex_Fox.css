@@ -1,8 +1,3 @@
-table{
-    background-image: linear-gradient(to top, #47B5FF, rgb(150, 150, 150));
-    padding-bottom: 300px;
-}
-
 h1{
     font-size: 50px;
     text-align: center;
@@ -12,18 +7,23 @@ header{
     padding: 25px;
 }
 
-#pfp{
-    text-align: center;
-}
-
 table{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
+    background-image: linear-gradient(to top, #47B5FF, rgb(150, 150, 150));
+    padding-bottom: 300px;
 }
-td{
-    border: 2px solid black;
-}
+
 #bio{
     width: 500px;
+    padding-right: 50px;
+}
+
+#pfp{
+    padding-right: 100px;
+}
+#details{
+    padding-right: 270px;
+    text-align: right;
 }
