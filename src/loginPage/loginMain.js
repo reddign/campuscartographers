@@ -19,6 +19,7 @@ function init() {
  
 function login() {
      alert("Logged In!")
+     btnElement.classList.add('clicked');
 }
  
  

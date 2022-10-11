@@ -7,7 +7,7 @@ body {
 div {
     background-color: white;     
     width: 250px;
-    height: 375px;
+    height: 370px;
 
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
@@ -27,7 +27,7 @@ h1 {
 }
 
 /* Input Boxes Attributes */
-input {
+#username, #password {
     font-family: Tahoma, Verdana, sans-serif;
     width: 225px;                   /* width of the input boxes */
     padding: 10px;                  /* white space between input text and border */ 
@@ -57,8 +57,10 @@ button {
     font-size: 12px;
     font-weight: bold; 
     text-align: center;
+    border: 2px solid black;
     border-radius: 18px;            
     width: 250px;
+    margin-top: 5px;                  /* extra white space between forgot password link and button */
     padding: 10px;
     background-image: linear-gradient(to right, cyan, #BF40BF);  
 } 
