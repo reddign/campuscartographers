@@ -1,3 +1,7 @@
+body{
+    /* gets rid of weird white border around page */
+    margin: 0%;
+}
 h1{
     font-size: 50px;
     text-align: center;
