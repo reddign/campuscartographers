@@ -9,7 +9,12 @@ header table tr td:nth-child(2){
     font-size: 30px;
 }
 
+main{
+    padding: 220px;
+}
+
 footer{
+    padding: 20px;
     background-color: lightgray;
     text-align: center;
 }
