@@ -3,11 +3,14 @@ body{
     margin: 0%;
 }
 h1{
+    font-family: clarendon-text-pro, serif;
+    font-style: normal;
+    font-weight: 700;
     font-size: 50px;
     text-align: center;
 }
 header{
-    background-image: linear-gradient(to bottom, rgb(50, 50, 50), rgb(150,150,150));
+    background-color: #c8c8c8;
     padding: 25px;
 }
 
@@ -15,7 +18,7 @@ table{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-image: linear-gradient(to top, #47B5FF, rgb(150, 150, 150));
+    background-image: linear-gradient(to top, #004b98, #c8c8c8);
     padding-bottom: 300px;
 }
 
