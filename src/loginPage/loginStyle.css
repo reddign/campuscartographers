@@ -1,6 +1,7 @@
 /* Background Attributes */
 body {
-    background-image: linear-gradient(to right, aqua , #BF40BF);
+    /* background-image: linear-gradient(to right, aqua , #BF40BF); pink to blue gradien */
+    background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
 /* Div Attributes */ 
@@ -8,7 +9,7 @@ div {
     background-color: white;     
     width: 250px;
     height: 370px;
-
+    
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
     margin-top: 140px;              /* add extra space from top of page (center to screen) */
@@ -62,10 +63,13 @@ button {
     width: 250px;
     margin-top: 5px;                  /* extra white space between forgot password link and button */
     padding: 10px;
-    background-image: linear-gradient(to right, cyan, #BF40BF);  
+    /* background-image: linear-gradient(to right, cyan, #BF40BF);   */
+    background-image: linear-gradient(to left, #000080, lightsteelblue);  
 } 
 
 /* Button Modifyers */
 button:hover {
-    background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  
+    /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);   pink to blue gradient */
+    background-image: linear-gradient(to left, #1034A6, white); 
+    border-color: #36454F; 
 } 
