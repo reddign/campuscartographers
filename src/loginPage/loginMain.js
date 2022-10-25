@@ -10,7 +10,7 @@ var loggedIn = false;
 function init() {
  
     let btnElement = document.querySelector('button');      // select the button by query
-    btnElement.addEventListener('click', authenticate);            // handles the button click event 
+    btnElement.addEventListener('click', authenticate);     // handles the button click event 
  
     /* Button Color Changes */
     btnElement.addEventListener('mousemove', () => {        // when hovering over the button, perform hover color change
