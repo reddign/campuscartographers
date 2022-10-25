@@ -19,28 +19,38 @@ function init() {
 
     function authenticate() {
         let password = document.getElementById('password').value;
+        let username = document.getElementById('username').value;
 
-        loggedIn = login(password);
-        status();
+        loggedIn = login(username, password);
+        loginStatus();
     }
 }
  
-function login(password) {
-    var storedPassword = 'foodisgood'
-    return password == storedPassword;
+function login(username, password) {
+    var storedPassword = 'beans'
+    if (username != "") {
+        return password == storedPassword;
+    }
 }
 
-function status() {
+function loginStatus() {
     if (loggedIn) {
-        console.log('You logged in')
-        
+        alert('You logged in!')
+        // window.location.href = "";           ADD LINK TO ADMIN VERSION OF WEBPAGE (EDIT INVENTORY/UPLOAD IMAGES)
     }
     else {
-        alert("Incorrect Password!")
+        console.log('You are not logged in!')
+
+        // Error Message reveal
+        errorDiv.classList.remove("hidden");
+
+        // Reset text in password input field 
         let password = document.getElementById('password').value;
         password.innerText = "";
+
+        // Red styliziation around username/password field 
         var style = document.createElement('style');
-        style.innerHTML = `
+        style.innerHTML = ` 
         #passwordLabel, ::placeholder {
             color: red;
         }
@@ -49,7 +59,6 @@ function status() {
             border-color: red;
         }
         `;
-
         document.head.appendChild(style);
     }
 }
