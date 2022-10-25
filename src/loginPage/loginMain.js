@@ -17,6 +17,7 @@ function init() {
        btnElement.classList.add('hover');
     });
 
+    /* Store values of username and password then prompt the login function  */
     function authenticate() {
         let password = document.getElementById('password').value;
         let username = document.getElementById('username').value;
@@ -25,7 +26,10 @@ function init() {
         loginStatus();
     }
 }
- 
+
+/* Return login if the storedpassword matches the user password
+ * Arguments: username and password 
+*/
 function login(username, password) {
     var storedPassword = 'beans'
     if (username != "") {
@@ -33,6 +37,9 @@ function login(username, password) {
     }
 }
 
+/* If login successful, transfer user to new page
+ * If login unsuccessful, display error message and reset password field for resubmission
+ */
 function loginStatus() {
     if (loggedIn) {
         alert('You logged in!')
