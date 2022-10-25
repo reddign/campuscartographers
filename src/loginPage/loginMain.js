@@ -48,7 +48,7 @@ function loginStatus() {
     else {
         console.log('You are not logged in!')
 
-        // Error Message reveal
+        // Reveal Error Message 
         errorDiv.classList.remove("hidden");
 
         // Reset text in password input field 

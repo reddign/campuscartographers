@@ -1,6 +1,6 @@
 /* Background Attributes */
 body {
-    /* background-image: linear-gradient(to right, aqua , #BF40BF); pink to blue gradien */
+    /* background-image: linear-gradient(to right, aqua , #BF40BF); CYAN TO MAGENTA GRADIENT */
     background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
@@ -69,7 +69,7 @@ button {
 
 /* Button Modifyers */
 button:hover {
-    /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);   pink to blue gradient */
+    /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF); CYAN TO MAGENTA GRADIEN */
     background-image: linear-gradient(to left, #1034A6, white); 
     border-color: #36454F; 
 } 
