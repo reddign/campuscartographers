@@ -1,0 +1,94 @@
+* {
+    background-color: #0A2240;
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+  }
+  
+  .team-section {
+    overflow: hidden;
+    text-align: center;
+    background-color: #0A2240;
+    padding: 60px;
+  }
+  
+  .team-section h1 {
+    margin-bottom: 60px;
+    color: white;
+    font-size: 40px;
+  }
+  
+  .border {
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background-color: #3DB5E6;
+    margin-bottom: 40px;
+  }
+  
+  /* img{
+    height: 160px;
+    width: 160px;
+  } */
+  
+  .ps {
+    margin-bottom: 40px;
+  }
+  
+  /* img{
+    display: inline-block;
+    margin: 0 30px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    /* width: 100%; */
+    /* filter: grayscale(100%);
+    transition: 0.4s all; 
+  } */
+  
+  .pfp a {
+    display: inline-block;
+    margin: 0 30px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    
+  }
+  
+  .pfp a img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.4s all;
+  } 
+  
+   .pfp a:hover > img{
+    filter:none;
+  }
+  
+  .section {
+    width: 600px;
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    /* height: 0; */
+    /* overflow: hidden; */
+  }
+  
+  .section:target {
+    height: auto;
+  }
+  
+  .name {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .hidden {
+    display: none;
+  }
