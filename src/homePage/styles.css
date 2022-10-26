@@ -28,6 +28,8 @@
   .header {
     padding: 1%;
     background-color: #c8c8c8;
+    width: 85%;
+    margin-left: 15%;
   }
 
   /* Style page content */
