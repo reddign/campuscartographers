@@ -1,14 +1,15 @@
 /* Background Attributes */
 body {
-    background-image: linear-gradient(to right, aqua , #BF40BF);
+    /* background-image: linear-gradient(to right, aqua , #BF40BF); CYAN TO MAGENTA GRADIENT */
+    background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
-/* Div Attributes */ 
-div {
+/* Main Div Attributes */ 
+#main {
     background-color: white;     
     width: 250px;
     height: 370px;
-
+    
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
     margin-top: 140px;              /* add extra space from top of page (center to screen) */
@@ -30,7 +31,7 @@ h1 {
 #username, #password {
     font-family: Tahoma, Verdana, sans-serif;
     width: 225px;                   /* width of the input boxes */
-    padding: 10px;                  /* white space between input text and border */ 
+    padding: 10px;                  /* white space between input text and border of text field */ 
 }
 
 /* Username and Password label Attributes */
@@ -43,7 +44,7 @@ label {
 #forgotPassword {
     font-family: Tahoma, Verdana, sans-serif;
     font-size: 13px;
-    padding-left: 149px;             /* place forgotPassword to the rightside of the div */
+    margin-left: 149px;             /* place forgotPassword to the rightside of the div */
 }
 
 /* HyperLink Modifiers */
@@ -62,10 +63,33 @@ button {
     width: 250px;
     margin-top: 5px;                  /* extra white space between forgot password link and button */
     padding: 10px;
-    background-image: linear-gradient(to right, cyan, #BF40BF);  
+    /* background-image: linear-gradient(to right, cyan, #BF40BF);   */
+    background-image: linear-gradient(to left, #000080, lightsteelblue);  
 } 
 
 /* Button Modifyers */
 button:hover {
-    background-image: linear-gradient(to right, #7DF9FF, #CF9FFF);  
+    /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF); CYAN TO MAGENTA GRADIEN */
+    background-image: linear-gradient(to left, #1034A6, white); 
+    border-color: #36454F; 
 } 
+
+/* Error Div Attributes */
+#errorDiv {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+/* Error Div Horizontal Line Attributes */
+#errorHr {
+    margin-top: 0px;
+    border-color: red;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
