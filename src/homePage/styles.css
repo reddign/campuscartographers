@@ -19,6 +19,10 @@
     color: #c8c8c8;
     display: block;
   }
+
+  .sidenav >:nth-child(2){
+    padding-top: 15px;
+  }
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
@@ -31,6 +35,18 @@
     width: 85%;
     margin-left: 15%;
     overflow-x: hidden;
+  }
+
+  .inventoryTabs {
+    width: 80%;
+    justify-content: end;
+  }
+
+  .inventoryTabs a {
+    width:auto;
+    background-color: #0A2240;
+    color:#c8c8c8;
+    font-weight: bold;
   }
 
   /* Style page content */
