@@ -44,7 +44,7 @@
     display: flex;
   }
 
-  .inventoryTabs a {
+  .main .inventoryTabs a {
     width:33.33%;
     background-color: #004B98;
     color:#c8c8c8;
