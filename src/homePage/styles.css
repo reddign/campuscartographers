@@ -30,7 +30,7 @@
     background-color: #c8c8c8;
     width: 85%;
     margin-left: 15%;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   /* Style page content */
@@ -51,6 +51,7 @@
 
   body{
     margin: 0%;
+    overflow-x: hidden;
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
