@@ -40,11 +40,8 @@
     overflow-x: hidden;
   }
 
-  .inventoryTabs {
-    display: flex;
-  }
 
-  .main .inventoryTabs .tab {
+  a.tab {
     width:20%;
     background-color: #004B98;
     color:#c8c8c8;
