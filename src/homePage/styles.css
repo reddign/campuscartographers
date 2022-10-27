@@ -44,8 +44,8 @@
     display: flex;
   }
 
-  .main .inventoryTabs a {
-    width:33.33%;
+  /* .main .inventoryTabs a {
+    width:20%;
     background-color: #004B98;
     color:#c8c8c8;
     font-weight: bold;
@@ -55,7 +55,7 @@
     border-width: 2px;
     border-radius: 1px;
     border-color: #0A2240;
-  }
+  } */
 
 
 
