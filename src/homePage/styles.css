@@ -1,7 +1,7 @@
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 15%; /* Set the width of the sidebar 250px*/
+    width: 230px; /* Set the width of the sidebar 250px*/
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -28,32 +28,36 @@
   .sidenav a:hover {
     color: #3DB5E6;
   }
+
+  .main{
+    overflow-x: hidden;
+    margin-left: 230px; /* Same as the width of the sidebar */
+  }
   
   .header {
     padding: 1%;
     background-color: #c8c8c8;
-    width: 85%;
-    margin-left: 15%;
     overflow-x: hidden;
   }
 
   .inventoryTabs {
-    width: 80%;
-    justify-content: end;
+    display: flex;
   }
 
   .inventoryTabs a {
-    width:auto;
-    background-color: #0A2240;
+    width:33.33%;
+    background-color: #004B98;
     color:#c8c8c8;
     font-weight: bold;
+    padding: 4px;
+    text-align: center;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1px;
+    border-color: #0A2240;
   }
 
-  /* Style page content */
-  .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;/*0px 10px*/
-  }
+
 
   #EtownLogo {
     height: 75px;
