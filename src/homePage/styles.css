@@ -44,7 +44,7 @@
     display: flex;
   }
 
-  /* .main .inventoryTabs a {
+  .main .inventoryTabs .tab {
     width:20%;
     background-color: #004B98;
     color:#c8c8c8;
@@ -55,7 +55,7 @@
     border-width: 2px;
     border-radius: 1px;
     border-color: #0A2240;
-  } */
+  }
 
 
 
