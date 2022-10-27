@@ -30,6 +30,7 @@
     background-color: #c8c8c8;
     width: 85%;
     margin-left: 15%;
+    overflow: hidden;
   }
 
   /* Style page content */
