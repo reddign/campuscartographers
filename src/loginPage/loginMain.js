@@ -43,7 +43,7 @@ function login(username, password) {
 function loginStatus() {
     if (loggedIn) {
         alert('You logged in!')
-        // window.location.href = "";           ADD LINK TO ADMIN VERSION OF WEBPAGE (EDIT INVENTORY/UPLOAD IMAGES)
+        // window.location.href = "";      ADD LINK TO ADMIN VERSION OF WEBPAGE (EDIT INVENTORY/UPLOAD IMAGES!!!!!!!!!!!!!!
     }
     else {
         console.log('You are not logged in!')
