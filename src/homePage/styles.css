@@ -57,13 +57,26 @@
 
 
   #EtownLogo {
-    height: 75px;
+    height: 83px;
+    padding-bottom: 50px;
   }
 
   #PantryLogo {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .border {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 3px;
+    width: 175px;
+    background-color: #3DB5E6;
+    border-radius: 2px
   }
 
   body{
