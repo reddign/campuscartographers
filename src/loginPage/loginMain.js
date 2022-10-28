@@ -48,7 +48,7 @@ function loginStatus() {
         window.location.href = "membersPage/members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
     }
     else {
-        console.log('Incorrect username and password!');
+        console.log('Incorrect Username or Password!');
         // Error Message reveal 
         errorDiv.classList.remove("hidden");
 
