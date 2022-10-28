@@ -22,6 +22,13 @@ body {
 
 }
 
+/* .bannerClass {
+    background-image: url("\docs\images\pantry-header1.jpg");
+    padding: 60px;
+    height: 350px;
+    background-blend-mode: #81C6E8;
+} */
+
 .border {
     display: block;
     margin: auto;
