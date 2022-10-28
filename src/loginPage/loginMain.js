@@ -10,7 +10,7 @@ var loggedIn = false;
 function init() {
  
     let btnElement = document.querySelector('button');      // select the button by query
-    btnElement.addEventListener('click', authenticate);     // handles the button click event 
+    btnElement.addEventListener('click', authenticate);     // on button click, redirect to adminMembersPage
  
     /* Button Color Changes */
     btnElement.addEventListener('mousemove', () => {        // when hovering over the button, perform hover color change
@@ -26,49 +26,47 @@ function init() {
         loginStatus();
     }
 }
-
-/* Return login if the storedpassword matches the user password
- * Arguments: username and password 
-*/
+ 
+/* If login successful, transfer user to new page
+ * If login unsuccessful, display the correct error message
+ */
 function login(username, password) {
-    var storedPassword = 'beans'
-    if (username != "") {
+    var storedUsername = 'jaysAdmin';
+    var storedPassword = 'beans';
+
+    console.log(username);
+    console.log(password);
+
+    if (username == storedUsername) {
         return password == storedPassword;
     }
 }
 
-/* If login successful, transfer user to new page
- * If login unsuccessful, display error message and reset password field for resubmission
- */
 function loginStatus() {
     if (loggedIn) {
-        alert('You logged in!')
-        // window.location.href = "";      ADD LINK TO ADMIN VERSION OF WEBPAGE (EDIT INVENTORY/UPLOAD IMAGES!!!!!!!!!!!!!!
+        alert('You logged in!');
+        window.location.href = "membersPage/members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
     }
     else {
-        console.log('You are not logged in!')
-
-        // Reveal Error Message 
+        console.log('Incorrect Username or Password!');
+        // Error Message reveal 
         errorDiv.classList.remove("hidden");
-
-        // Reset text in password input field 
-        let password = document.getElementById('password').value;
-        password.innerText = "";
 
         // Red styliziation around username/password field 
         var style = document.createElement('style');
         style.innerHTML = ` 
-        #passwordLabel, ::placeholder {
+        #username::placeholder, #password::placeholder {
             color: red;
         }
-
-        #password {
+        
+        #username, #password {
             border-color: red;
         }
         `;
         document.head.appendChild(style);
     }
 }
+ 
  
  
  
