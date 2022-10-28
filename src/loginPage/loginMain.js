@@ -30,8 +30,8 @@ function init() {
  * If login unsuccessful, display the correct error message
  */
 function login(username, password) {
-    var storedUsername = 'spikeAdmin';
-    var storedPassword = 'spookball4life';
+    var storedUsername = 'jaysAdmin';
+    var storedPassword = 'beans';
 
     console.log(username);
     console.log(password);
