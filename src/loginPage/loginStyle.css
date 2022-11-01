@@ -15,8 +15,8 @@ body {
     margin-top: 140px;              /* add extra space from top of page (center to screen) */
 
     padding-bottom: 10px;           /* add extra white space between button and div border */
-    padding-left: 50px;             
-    padding-right: 50px;
+    padding-left: 50px;             /* white space between div contents and div border */
+    padding-right: 50px;            /* white space between div contents and div border */
 }
 
 /* Login Header Attributes */
