@@ -15,8 +15,8 @@ body {
     margin-top: 140px;              /* add extra space from top of page (center to screen) */
 
     padding-bottom: 10px;           /* add extra white space between button and div border */
-    padding-left: 50px;             
-    padding-right: 50px;
+    padding-left: 50px;             /* white space between div contents and div border */
+    padding-right: 50px;            /* white space between div contents and div border */
 }
 
 /* Login Header Attributes */
@@ -44,7 +44,11 @@ label {
 #forgotPassword {
     font-family: Tahoma, Verdana, sans-serif;
     font-size: 13px;
-    margin-left: 149px;             /* place forgotPassword to the rightside of the div */
+    /* margin-left: 100%;             place forgotPassword to the rightside of the div */
+}
+
+#forgotPasswordDiv {
+    text-align: right;
 }
 
 /* HyperLink Modifiers */
@@ -103,4 +107,23 @@ button:focus {
 /* Hidden Class */
 .hidden {
     display: none;
+}
+
+body {
+    margin: 0%;
+}
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    #main {
+      width: 75%; 
+      padding-left: 8%;
+      padding-right: 8%;
+    }
+    button {
+        width: 100%;
+      }
+    #username, #password {
+        width: 91%
+    }
 }
