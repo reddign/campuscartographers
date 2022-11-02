@@ -29,6 +29,25 @@ body {
     background-blend-mode: #81C6E8;
 } */
 
+/* .bannerClass {
+  background-image: linear-gradient(var(--primary-blue), var(--primary-blue)), url(/docs/images/pantry-header1.jpg);
+  background-blend-mode: color;
+  min-height: 40vh;
+}
+.bannerClass {
+  width: 100vw;
+  min-height: 40vh;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 15%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-shadow: 1px 1px #333333;
+} */
+
 .border {
     display: block;
     margin: auto;
