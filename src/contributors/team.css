@@ -4,6 +4,13 @@
     padding: 0%;
     font-family: sans-serif;
   }
+
+  .home{
+    padding-left: 25px;
+    padding-top: 25px;
+    position: fixed;
+    color: #c8c8c8;
+}
   
   .team-section {
     overflow: hidden;
@@ -92,3 +99,4 @@
   .hidden {
     display: none;
   }
+  
