@@ -1,7 +1,7 @@
 <?PHP
 //connect to the db
-$servername = "";
+$servername = "156.67.74.65";
 $username = "u413142534.bluejaypantry";
-$password = "mantel";
+$password = "Xdr341Food";
 $database = "dataana8_baseball";
 ?>
