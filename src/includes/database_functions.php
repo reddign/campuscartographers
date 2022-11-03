@@ -10,7 +10,7 @@ function getDataFromSQL($sql,$params=null){
     } catch(PDOException $e) {
       echo "Connection failed: " . $e->getMessage();
     }
-
+    
     $stmt = $conn->prepare($sql);
     $stmt->execute($params);
     $stmt->execute();
