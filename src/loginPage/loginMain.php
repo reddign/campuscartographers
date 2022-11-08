@@ -7,7 +7,7 @@
     require_once "";
  ?>
 
- <script>
+<script>
 window.addEventListener('load', init);    // when window is loaded, it will call init
 var loggedIn = false;
 
@@ -50,7 +50,7 @@ function loginStatus() {
     if (loggedIn) {
         alert('You logged in!');
         window.location.href = "https://bluejaypantry.etowndb.com/";
-        .classList.remove("hidden");
+        // .classList.remove("hidden");
     }
     else {
         console.log('Incorrect Username or Password!');
