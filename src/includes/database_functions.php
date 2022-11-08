@@ -1,5 +1,5 @@
 <?PHP
-require_once "database.php";
+require_once "config.php";
 function getDataFromSQL($sql,$params=null){
     global $servername,$database,$username,$password;
     try {
@@ -10,7 +10,7 @@ function getDataFromSQL($sql,$params=null){
     } catch(PDOException $e) {
       echo "Connection failed: " . $e->getMessage();
     }
-    
+
     $stmt = $conn->prepare($sql);
     $stmt->execute($params);
     $stmt->execute();
