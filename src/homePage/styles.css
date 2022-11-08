@@ -105,6 +105,10 @@
     overflow-x: hidden;
   }
 
+  .sidenav a .hidden {
+    display: none;
+  }
+
   /* #loginBtn {
     position: absolute;
     top: 70px;
