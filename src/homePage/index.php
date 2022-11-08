@@ -1,3 +1,7 @@
+<?php
+require_once "includes/database_functions.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +26,7 @@
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.html">Admin Login</a>
         <a class="hidden" href="">Edit Inventory</a>
-        <a class="hidden"href="#">Reports</a>
+        <a class="hidden" href="#">Reports</a>
             
             <!-- <button id="loginBtn" type="button" 
             style="position: absolute;

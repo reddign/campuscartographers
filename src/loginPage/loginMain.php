@@ -3,7 +3,11 @@
  * Date: 9/29/22
  * Description: Secure Login, using username and password
  */
+ <?php
+    require_once "";
+ ?>
 
+ <script>
 window.addEventListener('load', init);    // when window is loaded, it will call init
 var loggedIn = false;
 
@@ -45,7 +49,8 @@ function login(username, password) {
 function loginStatus() {
     if (loggedIn) {
         alert('You logged in!');
-        window.location.href = "membersPage/members.html";  // ADD LINK TO ADMIN VERSION OF MEMBERS PAGE!!!!!!!!!!!!!!!!!!
+        window.location.href = "https://bluejaypantry.etowndb.com/";
+        .classList.remove("hidden");
     }
     else {
         console.log('Incorrect Username or Password!');
@@ -66,6 +71,7 @@ function loginStatus() {
         document.head.appendChild(style);
     }
 }
+</script>
  
  
  

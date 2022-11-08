@@ -105,7 +105,7 @@
     overflow-x: hidden;
   }
 
-  .sidenav a .hidden {
+  .hidden {
     display: none;
   }
 
