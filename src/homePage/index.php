@@ -55,36 +55,7 @@ require_once "includes/database_functions.php";
             <a class="tab" href="#">Wellness Products</a>
         </div>
         <div class="content">
-            <?php
-//    <!-- // (1) Open the database connection and use the winestore
-   // database -->
-   $connection = mysql_connect("156.67.74.51","u413142534_bluejay","Xdr341Food");
-
-   mysql_select_db("u413142534_pantry", $connection);
-
-//    <!-- // (2) Run the query on the winestore through the
-   //  connection -->
-   $result = mysql_query ("SELECT * FROM                
-                          product", $connection);
-
-//    <!-- // (3) While there are still rows in the result set,
-   // fetch the current row into the array $row -->
-   while ($row = mysql_fetch_row($result))
-   {
-    //  <!-- // (4) Print out each element in $row, that is,
-     // print the values of the attributes -->
-      for ($i=0; $i<mysql_num_fields($result); $i++){
-        echo $row[$i] . " ";  
-        console.log($row[$i]);
-      }
-         
-
-    //   <!-- // Print a carriage return to neaten the output -->
-      echo "\n";
-   }
-    // <!-- (5) Close the database connection -->
-   mysql_close($connection);
-?>
+            
         </div>
     </div>
     
