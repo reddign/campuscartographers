@@ -21,6 +21,7 @@
         <a href="#">Fresh Foods</a>
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
+        <img id="cart" src="\docs\images\moving-cart.png">
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
@@ -56,7 +57,6 @@
         </div>
         <div class="content"></div>
     </div>
-    
         
 </body>
 </html>

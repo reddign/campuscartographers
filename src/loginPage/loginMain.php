@@ -1,11 +1,11 @@
-/*
+<!-- /*
  * Author: Aiden Walmer
  * Date: 9/29/22
  * Description: Secure Login, using username and password
- */
- <?php
-    require_once "";
- ?>
+ */ -->
+<?php
+    require_once "includes/database_functions.php";
+?>
 
 <script>
 window.addEventListener('load', init);    // when window is loaded, it will call init
