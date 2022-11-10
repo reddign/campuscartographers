@@ -21,7 +21,6 @@
         <a href="#">Fresh Foods</a>
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
-        <img id="cart" src="\docs\images\moving-cart.png">
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
@@ -47,6 +46,7 @@
     <div class="main">
         <div class="header">
             <a><img id="PantryLogo" src="\docs\images\BlueJayPantryLogo(1).png" height="150"></a> 
+            <a class="cartstyle" href="#"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
         </div>
         <div class="inventoryTabs">
             <a class="tab" href="index.php?catID=1">Breakfast Foods</a>
