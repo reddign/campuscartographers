@@ -55,7 +55,41 @@ require_once "includes/database_functions.php";
             <a class="tab" href="#">Wellness Products</a>
         </div>
         <div class="content">
-            
+        <?php 
+	    
+        require_once "config.php";
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+          }
+          
+
+
+        $sql = "SELECT * from product where productID = 1";
+	    $exec = mysqli_query($con,$query);
+	    while($row = mysqli_fetch_array($exec)){
+	    echo "['".$row['class_name']."',".$row['students']."],";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        
+        $products = $stmt->fetchAll();
+        
+        foreach($products as $product){
+            echo "<div class= 'center'>  <{$product["productName"]}'>{$product["quantity"]}</a> </div>". "<BR>";
+	    }
+
+    }
+?> 
+
+
         </div>
     </div>
     
