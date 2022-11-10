@@ -6,9 +6,9 @@ body {
 
 /* Home Button Attributes */
 .home{
-    /* padding-left: 25px;
+    padding-left: 25px;
     padding-top: 25px;
-    position: fixed; */
+    position: fixed;
     color: #c8c8c8; 
 }
 
@@ -20,7 +20,7 @@ body {
     
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
-    margin-top: 140px;              /* add extra space from top of page (center to screen) */
+    margin-top: 40px;              /* add extra space from the home button to the main div (center to screen) */
 
     padding-bottom: 10px;           /* add extra white space between button and div border */
     padding-left: 50px;             /* white space between div contents and div border */
