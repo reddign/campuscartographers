@@ -109,6 +109,10 @@
     display: none;
   }
 
+  .center{
+    text-align: center;
+  }
+
   /* #loginBtn {
     position: absolute;
     top: 70px;
