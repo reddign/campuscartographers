@@ -112,6 +112,12 @@
   .center{
     text-align: center;
   }
+  .cartstyle {
+    position: absolute;
+    top: 45px;
+    right: 30px;
+    padding: 5px;
+  }
 
   /* #loginBtn {
     position: absolute;
