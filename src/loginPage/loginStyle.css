@@ -112,6 +112,12 @@ button:focus {
 body {
     margin: 0%;
 }
+.home{
+    padding-left: 25px;
+    padding-top: 25px;
+    position: fixed;
+    color: #c8c8c8;
+}
 
 @media only screen and (max-width: 620px) {
     /* For mobile phones: */
