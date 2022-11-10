@@ -1,13 +1,11 @@
-/*
+ /*
  * Author: Aiden Walmer
  * Date: 9/29/22
  * Description: Secure Login, using username and password
- */
- <?php
-    require_once "";
- ?>
+ */ 
 
-<script>
+
+
 window.addEventListener('load', init);    // when window is loaded, it will call init
 var loggedIn = false;
 
@@ -51,6 +49,7 @@ function loginStatus() {
         alert('You logged in!');
         window.location.href = "https://bluejaypantry.etowndb.com/";
         // .classList.remove("hidden");
+        // window.location.href = "\src\homePage\index.php";
     }
     else {
         console.log('Incorrect Username or Password!');
@@ -71,7 +70,7 @@ function loginStatus() {
         document.head.appendChild(style);
     }
 }
-</script>
+
  
  
  

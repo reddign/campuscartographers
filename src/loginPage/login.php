@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueJay Pantry Admin Login</title>
     <link rel="stylesheet" href="loginStyle.css">
-    <script src="loginMain.php"></script>
+    <script src="loginMain.js"></script>
 </head>
 
 <body>
