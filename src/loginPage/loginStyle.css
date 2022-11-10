@@ -4,6 +4,14 @@ body {
     background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
+/* Home Button Attributes */
+#home{
+    padding-left: 25px;
+    padding-top: 25px;
+    position: fixed;
+    color: #c8c8c8;
+}
+
 /* Main Div Attributes */ 
 #main {
     background-color: white;     
@@ -56,8 +64,8 @@ a:hover {
     color: #5CB8E4;
 }
 
-/* Button Attributes */
-button {
+/* Login Button Attributes */
+#logBtn {
     color: white;
     font-size: 12px;
     font-weight: bold; 
@@ -78,14 +86,14 @@ button {
 } 
 
 /* Button Modifyers */
-button:hover {
+#logBtn:hover {
     /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF); CYAN TO MAGENTA GRADIEN */
     background-image: linear-gradient(to left, #1034A6, white); 
     border-color: #36454F; 
 } 
 
 /* More Button Modifyers */
-button:focus {
+#logBtn:focus {
     outline-offset: 2px;
 }
 
@@ -111,12 +119,6 @@ button:focus {
 
 body {
     margin: 0%;
-}
-.home{
-    padding-left: 25px;
-    padding-top: 25px;
-    position: fixed;
-    color: #c8c8c8;
 }
 
 @media only screen and (max-width: 620px) {
