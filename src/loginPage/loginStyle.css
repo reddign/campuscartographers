@@ -5,11 +5,11 @@ body {
 }
 
 /* Home Button Attributes */
-#home{
-    padding-left: 25px;
+.home{
+    /* padding-left: 25px;
     padding-top: 25px;
-    position: fixed;
-    color: #c8c8c8;
+    position: fixed; */
+    color: #c8c8c8; 
 }
 
 /* Main Div Attributes */ 

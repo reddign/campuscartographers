@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div id="home">
+    <div class="home">
         <a href="https://bluejaypantry.etowndb.com/" >
             <img src="\docs\images\home-big.png" alt="home icon" height="75px">
         </a>
