@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div class="home">
+    <div class="home">
         <a href="https://bluejaypantry.etowndb.com/" >
             <img src="\docs\images\home-big.png" alt="home icon" height="75px">
         </a>
@@ -39,7 +39,7 @@
                 Password?</a>
         </div>
         <br>
-        <button>LOGIN</button>
+        <button id="logBtn">LOGIN</button>
     </div>
 </body>
 
