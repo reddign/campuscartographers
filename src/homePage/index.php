@@ -69,14 +69,12 @@
             echo "Connection failed: " . $e->getMessage();
           }
           
+        $categoryID = $_GET["catID"];
 
-
-        $sql = "SELECT * from product where productID = 1";
-	    $exec = mysqli_query($con,$query);
-	    while($row = mysqli_fetch_array($exec)){
-	    echo "['".$row['class_name']."',".$row['students']."],";
-        
+        $sql = "SELECT * from product where catID = :f";
+	    
         $stmt = $conn->prepare($sql);
+        $stmt ->bindParam(':f', '1');
         $stmt->execute();
         // set the resulting array to associative
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
