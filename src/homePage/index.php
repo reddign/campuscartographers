@@ -1,6 +1,6 @@
-<?php
-require_once "includes/database_functions.php";
-?>
+<!-- <?php
+// require_once "includes/database_functions.php";
+?> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@ require_once "includes/database_functions.php";
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
-        <a href="\src\loginPage\login.html">Admin Login</a>
+        <a href="\src\loginPage\login.php">Admin Login</a>
         <a class="hidden" href="">Edit Inventory</a>
         <a class="hidden" href="#">Reports</a>
             
@@ -54,6 +54,7 @@ require_once "includes/database_functions.php";
             <a class="tab" href="#">Snacks</a>
             <a class="tab" href="#">Wellness Products</a>
         </div>
+
         <div class="content">
         <?php 
 	    
@@ -91,7 +92,6 @@ require_once "includes/database_functions.php";
 
 
         </div>
-    </div>
     
         
 </body>
