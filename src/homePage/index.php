@@ -57,33 +57,7 @@
         </div>
         <div class="content"></div>
     </div>
+    
         
 </body>
 </html>
-<?php
-// $data=$_POST["term"];
-
-// echo $data;
-// echo "<BR>";
-// $answer = explode(" ",$data);
-// print_r($answer);
-// echo "<BR>";
-// echo $answer[2];
-include "includes/database_functions.php";
-//send a SQL statement and get results in to teams
-$sql = "SELECT productName FROM product";
-$params = [":productID"=>$productID,":productName"=>$productName];
-$products = getDataFromSQL($sql,$params);
-
-echo "<div class= 'center'>";
-foreach($products as $product){
-    // echo "<a href='player.php?playerID=".$player["productID"]."'>";
-    echo $product["productName"]." ".$product["productID"];
-    echo "</a> ";
-    echo "<BR>";
-}
-echo "</div>";
-    
-include "includes/footer.php";
-
-?>
