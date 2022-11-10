@@ -49,15 +49,50 @@
             <a><img id="PantryLogo" src="\docs\images\BlueJayPantryLogo(1).png" height="150"></a> 
         </div>
         <div class="inventoryTabs">
-            <a class="tab" href="#">Breakfast Foods</a>
-            <a class="tab" href="#">Canned Goods</a>
-            <a class="tab" href="#">Fresh Foods</a>
-            <a class="tab" href="#">Snacks</a>
-            <a class="tab" href="#">Wellness Products</a>
+            <a class="tab" href="index.php?catID=1">Breakfast Foods</a>
+            <a class="tab" href="index.php?catID=2">Canned Goods</a>
+            <a class="tab" href="index.php?catID=3">Fresh Foods</a>
+            <a class="tab" href="index.php?catID=4">Snacks</a>
+            <a class="tab" href="index.php?catID=5">Wellness Products</a>
         </div>
-        <div class="content"></div>
-    </div>
-    
+
+        <div class="content">
+        <?php 
+	    
+        require_once "../includes/config.php";
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+          }
+          
+        $categoryID = isset($_GET["catID"])?$_GET["catID"]:null;
+
+	    if(isset($categoryID)) 
+        {$sql = "SELECT * from product where catID = :f";}
+        else
+	    {$sql = "SELECT * from product";}
+        
+        $stmt = $conn->prepare($sql);
+        if(isset($categoryID)) 
+        $stmt->bindParam(':f', $categoryID, PDO::PARAM_INT);
+        $stmt->execute();
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        
+        $products = $stmt->fetchAll();
+        
+        foreach($products as $product){
+            echo "<div class= 'center'>  <a>{$product["productName"]}{$product["quantity"]}</a> </div>". "<BR>";
+	    }
+?> 
+
+
+        </div>    
         
 </body>
 </html>
