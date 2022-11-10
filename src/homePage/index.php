@@ -54,36 +54,45 @@
             <a class="tab" href="#">Snacks</a>
             <a class="tab" href="#">Wellness Products</a>
         </div>
-        <div class="content"></div>
-    </div>
+
+        <div class="content">
+        <?php 
+	    
+        require_once "config.php";
+
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+          }
+          
+
+
+        $sql = "SELECT * from product where productID = 1";
+	    $exec = mysqli_query($con,$query);
+	    while($row = mysqli_fetch_array($exec)){
+	    echo "['".$row['class_name']."',".$row['students']."],";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        // set the resulting array to associative
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        
+        $products = $stmt->fetchAll();
+        
+        foreach($products as $product){
+            echo "<div class= 'center'>  <{$product["productName"]}'>{$product["quantity"]}</a> </div>". "<BR>";
+	    }
+
+    }
+?> 
+
+
+        </div>
     
         
 </body>
 </html>
-<?php
-// $data=$_POST["term"];
-
-// echo $data;
-// echo "<BR>";
-// $answer = explode(" ",$data);
-// print_r($answer);
-// echo "<BR>";
-// echo $answer[2];
-include "includes/database_functions.php";
-//send a SQL statement and get results in to teams
-$sql = "SELECT productName FROM product";
-$params = [":productID"=>$productID,":productName"=>$productName];
-$products = getDataFromSQL($sql,$params);
-
-echo "<div class= 'center'>";
-foreach($products as $product){
-    // echo "<a href='player.php?playerID=".$player["productID"]."'>";
-    echo $product["productName"]." ".$product["productID"];
-    echo "</a> ";
-    echo "<BR>";
-}
-echo "</div>";
-    
-include "includes/footer.php";
-
-?>
