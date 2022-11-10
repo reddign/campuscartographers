@@ -3,9 +3,6 @@
  * Date: 9/29/22
  * Description: Secure Login, using username and password
  */
- <?php
-    require_once "";
- ?>
 
 window.addEventListener('load', init);    // when window is loaded, it will call init
 var loggedIn = false;
@@ -44,6 +41,11 @@ function login(username, password) {
         return password == storedPassword;
     }
 }
+
+// function login2(username, password) {
+//     .post("login.php?")
+// }
+
 
 function loginStatus() {
     if (loggedIn) {
