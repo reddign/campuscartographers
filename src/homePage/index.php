@@ -50,11 +50,11 @@
             <a class="cartstyle" href="#"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
         </div>
         <div class="inventoryTabs">
-            <a class="tab" href="index.php?catID=1">Breakfast Foods</a>
-            <a class="tab" href="index.php?catID=2">Canned Goods</a>
-            <a class="tab" href="index.php?catID=3">Fresh Foods</a>
-            <a class="tab" href="index.php?catID=4">Snacks</a>
-            <a class="tab" href="index.php?catID=5">Wellness Products</a>
+            <a class="tab" href="/src/homePage/index.php?catID=1">Breakfast Foods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=2">Canned Goods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=3">Fresh Foods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=4">Snacks</a>
+            <a class="tab" href="/src/homePage/index.php?catID=5">Wellness Products</a>
         </div>
 
         <div class="content">
@@ -90,6 +90,8 @@
         foreach($products as $product){
             echo "<div class= 'center'>  <a>{$product["productName"]}{$product["quantity"]}</a> </div>". "<BR>";
 	    }
+
+       
 ?> 
 
 
