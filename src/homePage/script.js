@@ -28,7 +28,7 @@ function showCart() {
     }
     `;
     document.head.appendChild(style);
-
+    
     // Show Add Member form
     let cartDiv = document.getElementById("cartDiv");
     cartDiv.classList.remove("hidden");   
