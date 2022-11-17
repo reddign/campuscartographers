@@ -48,21 +48,66 @@
     background-color: #004B98;
   }
   
-    a.tab {
-      display:inline-block;
-      text-decoration: none;
-      width: 19.4%;
-      height: 26px;
-      background-color: #004B98;
-      color: #c8c8c8;
-      font-weight: bold;
-      padding: 0px;
-      text-align: center;
-      border-style: solid; 
-      border-width: 2px;
-      border-radius: 3px;
-      border-color: #0A2240;
-    }
+  a.tab {
+    display:inline-block;
+    text-decoration: none;
+    width: 19.4%;
+    height: 26px;
+    background-color: #004B98;
+    color: #c8c8c8;
+    font-weight: bold;
+    padding: 0px;
+    text-align: center;
+    border-style: solid; 
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: #0A2240;
+  }
+
+  /* ALL Form Div Content Attributes */
+  #cartDiv {
+    width: 400px;
+    height: 315px;
+    background-color: white;
+    position: fixed;
+    left: 37%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px #000;
+    z-index: 1;     /* Show in front of previous page content */
+  } 
+
+  /* ALL Form Attributes */
+  #cartForm {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+  }
+
+  /* All Form Content Attributes */  
+  #cartForm>div {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ALL Form Div Header Attributes */
+  #cartDiv h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Form Div Button Attributes */
+  #cartDiv button {
+    width: 100px;
+    padding: 3px;
+    text-align: center;
+    margin: auto;
+  }
 
   /* a.tab {
     width:20%;
@@ -76,8 +121,6 @@
     border-radius: 1px;
     border-color: #0A2240;
   } */
-
-
 
   #EtownLogo {
     height: 83px;
@@ -109,6 +152,11 @@
    .hidden {
     display: none;
   } 
+
+  /* Darken the page after a button click */
+  .darken {
+    filter: brightness(50%);
+  }
 
   .center{
     text-align: center;

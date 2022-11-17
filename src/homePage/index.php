@@ -29,26 +29,26 @@
         <div class="hidden"><a href="">Edit Inventory</a></div>
         <div class=""><a href="AllFood.php">Reports</a></div>
             
-            <!-- <button id="loginBtn" type="button" 
-            style="position: absolute;
-            bottom: 70px;
-            left: 20px;
-            background-color: #004B98;
-            color: #c8c8c8;
-            padding: 5px;
-            font-weight: bold;
-            border-radius: 4px;
-            border-color: #004B98;" 
-            >Admin Login</button> -->
+        <!-- <button id="loginBtn" type="button" 
+        style="position: absolute;
+        bottom: 70px;
+        left: 20px;
+        background-color: #004B98;
+        color: #c8c8c8;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 4px;
+        border-color: #004B98;" 
+        >Admin Login</button> -->
         <!-- <a href="\src\loginPage\login.html">Edit Inventory</a> -->
     </div>
-  
+    
     <!-- Page content -->
     <div class="main">
         <div class="header">
             <a><img id="PantryLogo" src="\docs\images\BlueJayPantryLogo(1).png" height="150"></a> 
-            <a class="cartstyle" href="#"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
-        </div>
+            <a class="cartstyle" onclick="showCart()"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
+        </div> 
         <div class="inventoryTabs">
             <a class="tab" href="/src/homePage/index.php?catID=1">Breakfast Foods</a>
             <a class="tab" href="/src/homePage/index.php?catID=2">Canned Goods</a>
@@ -56,6 +56,7 @@
             <a class="tab" href="/src/homePage/index.php?catID=4">Snacks</a>
             <a class="tab" href="/src/homePage/index.php?catID=5">Wellness Products</a>
         </div>
+    </div>
 
         <div class="content">
         <?php 
@@ -107,7 +108,29 @@
         
         // foreach($products as $product){
         //     echo "<div class= 'center'>  <a>{$product["productName"]}{$product["quantity"]}</a> </div>". "<BR>";
-	    // }
+	    // }   
+        ?> 
+    </div>  
 
-       
-?> 
+    <!-- Cart Form -->    
+    <div id="cartDiv" class="hidden">
+    <form id="cartForm" action="" method="post">
+        <h2>Your Pantry Cart</h2>
+        <BR>
+        <div>
+            <label for="items">Items: </label>
+            <input id="items" type="text" placeholder="Cart is Empty">
+        </div>
+        <div>
+            <label for="qty">Quantity: </label>
+            <input id="qty" type="text" placeholder="0 Items"> 
+        </div>
+        <div>
+        <button class="cancelBtn" type="submit">CANCEL</button>
+        <button class="submitBtn" type="submit">SUBMIT</button>
+        </div>
+    </form>
+    </div>
+        
+</body>
+</html>

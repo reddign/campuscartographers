@@ -16,15 +16,15 @@ function init() {
     btnElement.addEventListener('mousemove', () => {        // when hovering over the button, perform hover color change
        btnElement.classList.add('hover');
     });
+}
 
-    /* Store values of username and password then prompt the login function  */
-    function authenticate() {
-        let password = document.getElementById('password').value;
-        let username = document.getElementById('username').value;
+/* Store values of username and password then prompt the login function  */
+function authenticate() {
+    let password = document.getElementById('password').value;
+    let username = document.getElementById('username').value;
 
-        loggedIn = login(username, password);
-        loginStatus();
-    }
+    loggedIn = login(username, password);
+    loginStatus();
 }
  
 /* If login successful, transfer user to new page
