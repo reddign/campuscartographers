@@ -1,8 +1,11 @@
 window.addEventListener("load", init);
 
 function init() {
-    let cartImg = document.querySelector(".cart");
+    let cartImg = document.querySelector(".cartstyle");
     cartImg.addEventListener("click", showCart);
+
+    let addBtns = document.querySelectorAll(".addCart");
+    addBtns.addEventListener('click', addCart);
 }
 
 function showCart() { 
@@ -28,5 +31,9 @@ function showCart() {
 
     // Show Add Member form
     let cartDiv = document.getElementById("cartDiv");
-    cartDiv.classList.remove("hidden");
+    cartDiv.classList.remove("hidden");   
+}
+
+function addCart(){
+    console.log('added to cart');
 }
