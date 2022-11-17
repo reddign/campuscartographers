@@ -67,7 +67,7 @@
   /* ALL Form Div Attributes */
   #cartDiv {
     min-width: 600px;
-    min-height: 300px;
+    min-height: 315px;
     background-color: white;
 
     /* Center the div to page */
@@ -112,6 +112,12 @@
     padding: 3px;
     text-align: center;
     margin: auto;
+  }
+
+  /* Horizontal Line Breaks in Cart Form */
+  #cartDiv hr {
+    width: 100%;
+    background-color: #00A4BD;
   }
 
   /* a.tab {
