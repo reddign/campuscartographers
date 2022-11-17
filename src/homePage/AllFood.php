@@ -26,8 +26,8 @@
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <a class="hidden" href="">Edit Inventory</a>
-        <a class="hidden" href="index.php">Reports</a>
+        <div class="hidden"><a href="">Edit Inventory</a></div>
+        <div class=""><a href="\src\homepage\AllFood.php">Reports</a></div>
             
             <!-- <button id="loginBtn" type="button" 
             style="position: absolute;
@@ -50,15 +50,14 @@
             <a class="cartstyle" href="#"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
         </div>
         <div class="inventoryTabs">
-            <a class="tab" href="index.php?catID=1">Breakfast Foods</a>
-            <a class="tab" href="index.php?catID=2">Canned Goods</a>
-            <a class="tab" href="index.php?catID=3">Fresh Foods</a>
-            <a class="tab" href="index.php?catID=4">Snacks</a>
-            <a class="tab" href="index.php?catID=5">Wellness Products</a>
+            <a class="tab" href="/src/homePage/index.php?catID=1">Breakfast Foods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=2">Canned Goods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=3">Fresh Foods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=4">Snacks</a>
+            <a class="tab" href="/src/homePage/index.php?catID=5">Wellness Products</a>
         </div>
 
         <div class="content">
- 
 
 <html>
 <head>

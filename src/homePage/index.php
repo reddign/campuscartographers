@@ -27,7 +27,7 @@
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
         <div class="hidden"><a href="">Edit Inventory</a></div>
-        <div class=""><a href="\src\homepage\AllFood.php">Reports</a></div>
+        <div class=""><a href="AllFood.php">Reports</a></div>
             
             <!-- <button id="loginBtn" type="button" 
             style="position: absolute;
