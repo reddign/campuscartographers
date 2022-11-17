@@ -119,6 +119,27 @@
     padding: 5px;
   }
 
+  .table {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .table tr td {
+    border: solid black;
+    border-width: 5px;
+    background-color: #c8c8c8;
+  }
+
+  .productImg {
+    height: 300px;
+    width:225px;
+    padding: 7px;
+    background-color: #c8c8c8;
+
+  }
+
   /* #loginBtn {
     position: absolute;
     top: 70px;
