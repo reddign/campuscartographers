@@ -66,10 +66,10 @@
 
   /* ALL Form Div Content Attributes */
   #cartDiv {
-    width: 400px;
-    height: 315px;
+    min-width: 600px;
+    min-height: 300px;
     background-color: white;
-    
+
     /* Center the div to page */
     position: absolute;
     left: 50%;

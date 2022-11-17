@@ -1,3 +1,4 @@
+
 <!-- <?php
 // require_once "includes/database_functions.php";
 ?> -->
@@ -59,6 +60,7 @@
 
         <div class="content">
 
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -105,7 +107,7 @@
 </head>
 <body>
 
-<h2>Total Food Ordered</h2>
+<h2>Total Food Ordered Grabbed</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
@@ -142,6 +144,7 @@
  <?php 
 			$query = "select basketDate, COUNT(basketDate) total
             from Basket
+            where basketDate BETWEEN '2022-10-26' and '2022-10-28'
             GROUP BY basketDate;";
 
 			 $exec = mysqli_query($con,$query);
@@ -154,7 +157,7 @@
  ]);
 
  
- var chart = new google.visualization.BarChart(document.getElementById("Bar"));
+ var chart = new google.visualization.PieChart(document.getElementById("Bar"));
  chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Food Grabbed'});
  
  }

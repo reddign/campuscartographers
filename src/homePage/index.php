@@ -118,14 +118,15 @@
     <form id="cartForm" action="" method="post">
         <h2>Your Pantry Cart</h2>
         <BR>
+        <hr>
         <div>
-            <label for="items">Items: </label>
-            <input id="items" type="text" placeholder="Cart is Empty">
+            <img src="../../docs/images/cannedgoodsTest.jpg" height="200px" width="200px">
+            <label>Beans </label>
+            <label for="qty">Qty: </label>
+            <input id="qty" type="number" width="20px" min="0" max="10" placeholder="0">
+            <label> In stock: 20</label>
         </div>
-        <div>
-            <label for="qty">Quantity: </label>
-            <input id="qty" type="text" placeholder="0 Items"> 
-        </div>
+        <hr>
         <div>
         <button class="cancelBtn" type="submit">CANCEL</button>
         <button class="submitBtn" type="submit">CHECKOUT</button>
