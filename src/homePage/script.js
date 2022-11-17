@@ -1,7 +1,8 @@
 window.addEventListener("load", init);
 
 function init() {
-    
+    let cartImg = document.querySelector(".cart");
+    cartImg.addEventListener("click", showCart);
 }
 
 function showCart() { 

@@ -47,7 +47,7 @@
     <div class="main">
         <div class="header">
             <a><img id="PantryLogo" src="\docs\images\BlueJayPantryLogo(1).png" height="150"></a> 
-            <a class="cartstyle" onclick="showCart()"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
+            <a class="cartstyle"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
         </div> 
         <div class="inventoryTabs">
             <a class="tab" href="/src/homePage/index.php?catID=1">Breakfast Foods</a>
