@@ -27,7 +27,7 @@
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <div class="hidden"><a href="">Edit Inventory</a></div>
+        <div class=""><a href="\src\editinventory\edit.php">Edit Inventory</a></div>
         <div class=""><a href="AllFood.php">Reports</a></div>
             
         <!-- <button id="loginBtn" type="button" 
@@ -131,6 +131,25 @@
         <button class="submitBtn" type="submit">CHECKOUT</button>
         </div>
     </form>
+    </div>
+
+    <div>
+      <form>
+        <h2>Edit Inventory</h2>
+        <br>
+        <div>
+        <select>
+          <option value="">Select Category</option>
+          <option value="1">Breakfast</option>
+          <option value="2">Canned Goods</option>
+          <option value="3">Fresh Foods</option>
+          <option value="4">Snacks</option>
+          <option value="5">Wellness</option>
+        </select>
+        <input type="number">
+        <input type="submit" value="submit">
+        </div>
+      </form>
     </div>
         
 </body>

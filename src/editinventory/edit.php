@@ -12,7 +12,7 @@
         </a>
     </div>
 
-<div id="main">
+<!-- <div id="main">
   <form action="formprocessor" method="POST">
     <h1>Edit Inventory</h1>
     <label id="productNameLabel">Product Name:</label><br>
@@ -24,6 +24,26 @@
         <br>
         <input name="mySubmit" type="submit" value="Submit!">
   </form>
+</div> -->
+<div id="form">
+  <select>
+     <option value="">Select Category</option>
+     <option value="1">Breakfast</option>
+     <option value="2">Canned Goods</option>
+     <option value="3">Fresh Foods</option>
+     <option value="4">Snacks</option>
+     <option value="5">Wellness</option>
+  </select>
+  <!-- <select>
+     <option value="">Select Category</option>
+     <option value="1">Breakfast</option>
+     <option value="2">Canned Goods</option>
+     <option value="3">Fresh Foods</option>
+     <option value="4">Snacks</option>
+     <option value="5">Wellness</option>
+  </select> -->
+  <input type="number">
+  <input type="submit" value="submit">
 </div>
 </body>
 </html>
