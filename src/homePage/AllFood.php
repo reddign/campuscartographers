@@ -115,6 +115,8 @@
     <a href="AllFood1.php">Total Foods per type(Bar chart) </a>
     <a href="AllFood2.php">Total Orders per day(Pie chart</a>
     <a href="AllFood3.php">Total Orders per day(Bar chart)</a>
+    <a href="AllFood4.php">Total Orders with a range(Bar chart)</a>
+
   </div>
 </div>
 
