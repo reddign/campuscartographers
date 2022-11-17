@@ -27,7 +27,7 @@
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
         <div class="hidden"><a href="">Edit Inventory</a></div>
-        <div class="hidden"><a href="">Reports</a></div>
+        <div class=""><a href="AllFood.php">Reports</a></div>
             
         <!-- <button id="loginBtn" type="button" 
         style="position: absolute;
@@ -94,7 +94,7 @@
             if($i%5 == 0){
               echo"<tr>";
             }
-            echo"<td><img class='productImg' src='../../{$product['img']}' alt='productImg'><br><p>{$product["productName"]}<br> Qty: {$product["quantity"]}</p></td>";
+            echo"<td><img class='productImg' src='../../{$product['img']}' alt='productImg'><br><button class='addCart' type='button'>Add to Cart</button><p>{$product["productName"]}<br> Qty: {$product["quantity"]}</p></td>";
             if($i%5 == 4){
               echo"</tr>";
             }
