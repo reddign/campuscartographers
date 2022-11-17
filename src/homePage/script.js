@@ -8,7 +8,7 @@
     }
 
     function addCart(){
-        
+        console.log("added");
     }
 
 
