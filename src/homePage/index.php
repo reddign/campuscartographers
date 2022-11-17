@@ -128,7 +128,7 @@
         </div>
         <div>
         <button class="cancelBtn" type="submit">CANCEL</button>
-        <button class="submitBtn" type="submit">SUBMIT</button>
+        <button class="submitBtn" type="submit">CHECKOUT</button>
         </div>
     </form>
     </div>
