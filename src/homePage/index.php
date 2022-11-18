@@ -23,11 +23,12 @@
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
+        <a href="https://bluejaypantry.etowndb.com/">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <div class=""><a href="\src\editinventory\edit.php">Edit Inventory</a></div>
+        <div><a id="editInventory">Edit Inventory</a></div>
         <div class=""><a href="AllFood.php">Reports</a></div>
             
         <!-- <button id="loginBtn" type="button" 
@@ -134,12 +135,12 @@
     </form>
     </div>
 
-    <div>
-      <form>
+    <div id="editDiv" class="hidden">
+      <form class="editForm" action="" method="post">
         <h2>Edit Inventory</h2>
         <br>
         <div>
-        <select>
+        <select id="dropdownCat">
           <option value="">Select Category</option>
           <option value="1">Breakfast</option>
           <option value="2">Canned Goods</option>
@@ -147,8 +148,15 @@
           <option value="4">Snacks</option>
           <option value="5">Wellness</option>
         </select>
+        <br>
+        <select id="dropdownProd">
+          <option value="">Select Product</option>
+        </select>
+        <br>
         <input type="number">
-        <input type="submit" value="submit">
+        <br>
+        <button id="cancelBtn" type="submit">CANCEL</button>
+        <input id="submit" type="submit" value="submit">
         </div>
       </form>
     </div>
