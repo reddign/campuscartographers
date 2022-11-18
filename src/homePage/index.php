@@ -121,7 +121,7 @@
         <BR>
         <hr>
         <div>
-            <img src="../../docs/images/cannedgoodsTest.jpg" height="200px" width="200px">
+            <img src="../../docs/images/cannedgoodsTest.jpg" height="100px" width="100px">
             <label>Beans </label>
             <label for="qty">Qty: </label>
             <input id="qty" type="number" width="20px" min="0" max="10" placeholder="0">

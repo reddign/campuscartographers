@@ -64,10 +64,10 @@
     border-color: #0A2240;
   }
 
-  /* ALL Form Div Content Attributes */
+  /* ALL Form Div Attributes */
   #cartDiv {
     min-width: 600px;
-    min-height: 300px;
+    min-height: 280px;
     background-color: white;
 
     /* Center the div to page */
@@ -195,6 +195,12 @@
       top: 70%;
       transform: translate(-50%, -50%);
     }
+
+  /* Horizontal Line Breaks in Cart Form */
+  #cartDiv hr {
+    width: 100%;
+    background-color: #00A4BD;
+  }
 
   /* a.tab {
     width:20%;
