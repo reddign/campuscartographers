@@ -105,7 +105,7 @@
 </head>
 <body>
 
-<h2>Total Found Grabbed</h2>
+<h2>Total Food Grabbed</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
