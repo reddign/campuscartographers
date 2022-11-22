@@ -109,7 +109,7 @@
         
         // foreach($products as $product){
         //     echo "<div class= 'center'>  <a>{$product["productName"]}{$product["quantity"]}</a> </div>". "<BR>";
-	    // }   
+	    // }  
         ?> 
     </div>  
 
