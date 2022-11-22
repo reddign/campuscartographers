@@ -106,7 +106,7 @@
 </head>
 <body>
 
-<h2>Total Food Ordered</h2>
+<h2>Total Orders With a Date</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
@@ -139,7 +139,7 @@
  function drawChart() {
  var data = google.visualization.arrayToDataTable([
 
- ['Total Amount','CategoryID'],
+ ['Total Amount','Orders that day'],
  <?php 
 			$query = "select basketDate, COUNT(basketDate) total
             from Basket
@@ -156,7 +156,7 @@
 
  
  var chart = new google.visualization.BarChart(document.getElementById("Bar"));
- chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Food Grabbed'});
+ chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Ordered Food that day'});
  
  }
 	

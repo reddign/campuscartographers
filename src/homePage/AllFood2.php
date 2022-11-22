@@ -108,7 +108,7 @@
 </head>
 <body>
 
-<h2>Total Food Ordered Grabbed</h2>
+<h2>Total Orders With a Date</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
@@ -158,7 +158,7 @@
 
  
  var chart = new google.visualization.PieChart(document.getElementById("Bar"));
- chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Food Grabbed'});
+ chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Ordered Food that Day'});
  
  }
 	

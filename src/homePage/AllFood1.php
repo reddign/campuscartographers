@@ -142,7 +142,7 @@
  function drawChart() {
  var data = google.visualization.arrayToDataTable([
 
- ['Total Amount','CategoryID'],
+ ['Total Amount','Food Grabbed'],
  <?php 
 			$query = "select P.productName, COUNT(BI.basketID) total
       from product P,
