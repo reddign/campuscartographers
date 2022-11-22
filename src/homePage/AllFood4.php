@@ -23,6 +23,7 @@
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
+        <a href="index.php">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
