@@ -4,24 +4,17 @@ body {
     background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
-/* Home Button Attributes */
-.home {
-    padding-left: 25px;
-    padding-top: 25px;
-    color: #c8c8c8; 
-}
-
 /* Main Div Attributes */ 
 #main {
-    background-color: white;     
+    background-color: white;  
+    filter: drop-shadow(0 0 0.75rem black);   
     width: 250px;
-    height: 370px;
     
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
-    margin-top: 40px;              /* add extra space from the home button to the main div (center to screen) */
+    margin-top: 140px;              /* add extra space from top of page (center to screen) */
 
-    padding-bottom: 10px;           /* add extra white space between button and div border */
+    padding-bottom: 40px;           /* add extra white space between button and div border */
     padding-left: 50px;             /* white space between div contents and div border */
     padding-right: 50px;            /* white space between div contents and div border */
 }
@@ -31,7 +24,12 @@ h1 {
     font-family: Tahoma, Verdana, sans-serif;
     text-align: center;             /* center h1 text */
     padding-top: 40px;              /* add extra space between top of the oage and LOGIN */
-    margin-bottom: 30px;            /* add extra space between LOGIN and username box */
+    margin-bottom: 15px;            /* add extra space between header and username box */
+}
+
+/* Form Attributes */
+form {
+    margin-top: 25px;
 }
 
 /* Input Boxes Attributes */
@@ -48,23 +46,22 @@ label {
 }
 
 /* Hyperlink Attributes */
-#forgotPassword {
+/* #forgotPassword {
     font-family: Tahoma, Verdana, sans-serif;
     font-size: 13px;
-    /* margin-left: 100%;             place forgotPassword to the rightside of the div */
 }
 
 #forgotPasswordDiv {
     text-align: right;
-}
+} */
 
 /* HyperLink Modifiers */
 a:hover {
     color: #5CB8E4;
 }
 
-/* Login Button Attributes */
-#logBtn {
+/* Button Attributes */
+#loginBtn {
     color: white;
     font-size: 12px;
     font-weight: bold; 
@@ -77,38 +74,39 @@ a:hover {
     transition: outline-offset 200ms ease;
     outline-offset: -2px; 
 
+    margin-top: 5%;       /* extra space between password and button */
     width: 250px;
-    margin-top: 5px;                  /* extra white space between forgot password link and button */
     padding: 10px;
     /* background-image: linear-gradient(to right, cyan, #BF40BF);   */
     background-image: linear-gradient(to left, #000080, lightsteelblue);  
 } 
 
 /* Button Modifyers */
-#logBtn:hover {
+#loginBtn:hover {
     /* background-image: linear-gradient(to right, #7DF9FF, #CF9FFF); CYAN TO MAGENTA GRADIEN */
     background-image: linear-gradient(to left, #1034A6, white); 
     border-color: #36454F; 
 } 
 
 /* More Button Modifyers */
-#logBtn:focus {
+#loginBtn:focus {
     outline-offset: 2px;
 }
 
 /* Error Div Attributes */
-#errorDiv {
+#error {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 14px;
     color: red;
     font-weight: bold;
     text-align: center;
-    margin-top: -20px;
-    margin-bottom: 15px;
 }
 
 /* Error Div Horizontal Line Attributes */
 #errorHr {
     margin-top: 0px;
-    border-color: red;
+    border: solid 1px;
+    color: red;
 }
 
 /* Hidden Class */
@@ -120,23 +118,15 @@ body {
     margin: 0%;
 }
 
-.home{
-    padding-left: 25px;
-    padding-top: 25px;
-    /* position: fixed;
-    color: #c8c8c8; */
-}
-
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 400px) {
     /* For mobile phones: */
-    #main {
-      width: 75%; 
+    #main { 
       padding-left: 8%;
       padding-right: 8%;
     }
-    button {
+    #loginBtn {
         width: 100%;
-      }
+    }
     #username, #password {
         width: 91%
     }
