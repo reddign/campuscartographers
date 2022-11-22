@@ -41,17 +41,17 @@ if (isset($_POST['loginBtn'])) {
         if ($verify) {
             $_SESSION["LoginStatus"]="YES";
             $_SESSION["userid"]=$result[0]["userid"];
-            header("location: home.php");
+            header("location: ../homePage/index.php");
             exit;
         } else {
             $_SESSION["LoginStatus"]="NO";
             $_SESSION["userid"]="";
-            header("location: index.php");
+            header("location: login.php");
             $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
             exit;
         }
     } else {
-        header("location: index.php");
+        header("location: login.php");
         $_SESSION["error"] = "Incorrect Username or Password!"."<hr id='errorHR'>";
     }
 }
