@@ -23,6 +23,7 @@
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
+        <a href="https://bluejaypantry.etowndb.com/">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
@@ -117,6 +118,7 @@
     <a href="AllFood1.php">Total Foods per type(Bar chart) </a>
     <a href="AllFood2.php">Total Orders per day(Pie chart</a>
     <a href="AllFood3.php">Total Orders per day(Bar chart)</a>
+    <a href="AllFood4.php">Total Orders with a range(Bar chart)</a>
   </div>
 </div>
 

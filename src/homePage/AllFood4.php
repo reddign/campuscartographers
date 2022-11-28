@@ -23,7 +23,7 @@
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
-        <a href="https://bluejaypantry.etowndb.com/">Home</a>
+        <a href="index.php">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
@@ -145,6 +145,7 @@
  <?php 
 			$query = "select basketDate, COUNT(basketDate) total
             from Basket
+            where basketDate BETWEEN '2022-10-26' and '2022-10-28'
             GROUP BY basketDate;";
 
 			 $exec = mysqli_query($con,$query);

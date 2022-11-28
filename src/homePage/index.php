@@ -23,12 +23,13 @@
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
+        <a href="https://bluejaypantry.etowndb.com/">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <div class="hidden"><a href="">Edit Inventory</a></div>
-        <div class=""><a href="AllFood.php">Reports</a></div>
+        <a href="\src\editinventory\edit.php">Edit Inventory</a>
+        <a href="AllFood.php">Reports</a>
             
         <!-- <button id="loginBtn" type="button" 
         style="position: absolute;
@@ -109,7 +110,7 @@
         
         // foreach($products as $product){
         //     echo "<div class= 'center'>  <a>{$product["productName"]}{$product["quantity"]}</a> </div>". "<BR>";
-	    // }   
+	    // }  
         ?> 
     </div>  
 
@@ -118,19 +119,21 @@
     <form id="cartForm" action="" method="post">
         <h2>Your Pantry Cart</h2>
         <BR>
+        <hr>
         <div>
-            <label for="items">Items: </label>
-            <input id="items" type="text" placeholder="Cart is Empty">
+            <img src="../../docs/images/cannedgoodsTest.jpg" height="100px" width="100px">
+            <label>Beans </label>
+            <label for="qty">Qty: </label>
+            <input id="qty" type="number" width="20px" min="0" max="10" placeholder="0">
+            <label> In stock: 20</label>
         </div>
-        <div>
-            <label for="qty">Quantity: </label>
-            <input id="qty" type="text" placeholder="0 Items"> 
-        </div>
+        <hr>
         <div>
         <button class="cancelBtn" type="submit">CANCEL</button>
         <button class="submitBtn" type="submit">CHECKOUT</button>
         </div>
     </form>
+    </div>
     </div>
         
 </body>

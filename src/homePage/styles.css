@@ -64,12 +64,12 @@
     border-color: #0A2240;
   }
 
-  /* ALL Form Div Content Attributes */
+  /* ALL Form Div Attributes */
   #cartDiv {
-    width: 400px;
-    height: 315px;
+    min-width: 600px;
+    min-height: 280px;
     background-color: white;
-    
+
     /* Center the div to page */
     position: absolute;
     left: 50%;
@@ -112,6 +112,46 @@
     padding: 3px;
     text-align: center;
     margin: auto;
+  }
+
+    #dropdownCat {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+    }
+    #dropdownProd {
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+    }
+
+    .number {
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      width: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    #submit{
+      position: absolute;
+      left: 65%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+    }
+    #cancaelBtn{
+      position: absolute;
+      left: 35%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+    }
+
+  /* Horizontal Line Breaks in Cart Form */
+  #cartDiv hr {
+    width: 100%;
+    background-color: #00A4BD;
   }
 
   /* a.tab {
@@ -178,6 +218,7 @@
     text-align: center;
     justify-content: center;
     margin: auto;
+    padding-left: 230px;
   }
 
   .table tr td {

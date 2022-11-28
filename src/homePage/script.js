@@ -4,8 +4,11 @@ function init() {
     let cartImg = document.querySelector(".cartstyle");
     cartImg.addEventListener("click", showCart);
 
-    let addBtns = document.querySelectorAll(".addCart");
-    addBtns.addEventListener('click', addCart);
+    // let addBtns = document.querySelectorAll(".addCart");
+    // addBtns.addEventListener('click', addCart);
+
+    let editTag = document.getElementById('editInventory');
+    editTag.addEventListener('click', editQty);
 }
 
 function showCart() { 
@@ -21,14 +24,14 @@ function showCart() {
     let content = document.querySelector(".content");
     content.classList.add("darken");
     // Darken the background color
-    // var style = document.createElement('style');
-    // style.innerHTML = ` 
-    // body {
-    //     background-image: linear-gradient(to top, #000034, rgb(96, 119, 149)); 
-    // }
-    // `;
-    // document.head.appendChild(style);
-
+    var style = document.createElement('style');
+    style.innerHTML = ` 
+    body {
+        background-color: grey; 
+    }
+    `;
+    document.head.appendChild(style);
+    
     // Show Add Member form
     let cartDiv = document.getElementById("cartDiv");
     cartDiv.classList.remove("hidden");   
@@ -37,3 +40,4 @@ function showCart() {
 function addCart(){
     console.log('added to cart');
 }
+
