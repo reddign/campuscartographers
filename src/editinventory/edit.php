@@ -114,7 +114,7 @@ try {
   }
   
 
-  
+
   if(isset($categoryID))
   {$sql = "update product set quantity = $quantity where productName = $pName";}
 
