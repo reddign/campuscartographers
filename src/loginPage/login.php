@@ -22,6 +22,7 @@ require "loginMain.php";
         <a href="https://bluejaypantry.etowndb.com/" >
             <img src="\docs\images\home-big.png" alt="home icon" height="75px">
         </a>
+    </div>
     <div id="main">
         <h1>Admin Login</h1>
         <div id="error"><?php if(isset($_SESSION["error"])){echo $_SESSION["error"];} ?></div>
