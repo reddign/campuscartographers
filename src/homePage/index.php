@@ -49,7 +49,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <div id="adminTabs" class="hidden">
           <a href="\src\editinventory\edit.php">Edit Inventory</a>
           <a href="AllFood.php">Reports</a>
-          <a href="\src\loginPage\logout.php" color="red">Logout</a>
+          <!-- <a href="\src\loginPage\logout.php" color="red">Logout</a> -->
         </div>
             
         <!-- <button id="loginBtn" type="button" 
