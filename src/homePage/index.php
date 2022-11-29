@@ -3,9 +3,19 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
-  echo "You logged in!";
+  ?>
+  <script>
+    let adminTabs = document.getElementById("adminTabs");
+    adminTabs.classList.remove("hidden");
+  </script>
+  <?php
 } else {
-  echo "You are NOT logged in!";
+  ?>
+  <script>
+    let adminTabs = document.getElementById("adminTabs");
+    adminTabs.classList.add("hidden");
+  </script>
+  <?php
 }
 ?> 
 
@@ -35,8 +45,11 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <a href="\src\editinventory\edit.php">Edit Inventory</a>
-        <a href="AllFood.php">Reports</a>
+
+        <div id="adminTabs" class="hidden">
+          <a href="\src\editinventory\edit.php">Edit Inventory</a>
+          <a href="AllFood.php">Reports</a>
+        </div>
             
         <!-- <button id="loginBtn" type="button" 
         style="position: absolute;
