@@ -45,10 +45,11 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-
+        <!-- Hidden Admin Tabs -->
         <div id="adminTabs" class="hidden">
           <a href="\src\editinventory\edit.php">Edit Inventory</a>
           <a href="AllFood.php">Reports</a>
+          <a href="\src\loginPage\logout.php" color="red">Logout</a>
         </div>
             
         <!-- <button id="loginBtn" type="button" 
