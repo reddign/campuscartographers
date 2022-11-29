@@ -70,7 +70,7 @@ session_start();
         <div class="content">
         <?php 
 	    
-        require_once "../includes/config.php";
+        require "../includes/config.php";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
