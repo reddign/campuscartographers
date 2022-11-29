@@ -3,10 +3,6 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 // print_r($_SESSION);
-if(isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES"){
-	// header("location: ../homePage/index.php");
-	exit;
-}
 require "loginMain.php";
 ?>
 

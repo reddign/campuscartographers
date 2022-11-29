@@ -1,6 +1,13 @@
-<!-- <?php
-// require_once "includes/database_functions.php";
-?> -->
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+  echo "You logged in!";
+} else {
+  header("location: index.php");
+}
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
