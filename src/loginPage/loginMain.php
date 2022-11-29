@@ -40,6 +40,7 @@ if (isset($_POST['loginBtn'])) {
         $verify = password_verify($pass, $result[0]['password']);
         if ($verify) {
             $_SESSION["LoginStatus"]="YES";
+            $_SESSION["error"]="";
             // $_SESSION["userid"]=$result[0]["userid"];
             header("location: ../homePage/index.php");
             exit;
