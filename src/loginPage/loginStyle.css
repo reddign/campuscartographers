@@ -4,6 +4,13 @@ body {
     background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
+.home{
+    display: absolute;
+    padding-left: 25px;
+    padding-top: 25px;
+    color: #c8c8c8;
+}
+
 /* Main Div Attributes */ 
 #main {
     background-color: white;  
@@ -12,7 +19,7 @@ body {
     
     border-radius: 7px;             /* add border curvature */
     margin: auto;                   /* center div */
-    margin-top: 140px;              /* add extra space from top of page (center to screen) */
+    margin-top: 50px;              /* add extra space from top of page (center to screen) */
 
     padding-bottom: 40px;           /* add extra white space between button and div border */
     padding-left: 50px;             /* white space between div contents and div border */
@@ -112,10 +119,6 @@ a:hover {
 /* Hidden Class */
 .hidden {
     display: none;
-}
-
-body {
-    margin: 0%;
 }
 
 @media only screen and (max-width: 400px) {

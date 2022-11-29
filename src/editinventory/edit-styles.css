@@ -13,7 +13,7 @@
     font-size: 23px;
 }
 
-#input-form {
+.input-form {
     background-color: #c8c8c8;
 }
 
@@ -99,5 +99,9 @@ body {
   input[type="email"] {
     font-size: 12pt;
     padding: 6px;
+  }
+
+  #edit-add{
+    margin: auto;
   }
   

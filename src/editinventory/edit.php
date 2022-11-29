@@ -57,7 +57,7 @@
 
   <main>
     <div class="form">
-    <form id="input-form" class="hidden" method="POST">
+    <form id = "add-form" class ="input-form hidden" method="POST">
       <div>
         <label for="cat-input">Select Category: </label>
         <select id="cat-input" required>
@@ -90,6 +90,36 @@
     <!-- <p id="results"></p>
     <div id="queue">
     </div> -->
+
+    <form id = "edit-form" class="input-form hidden" method="POST">
+    <div>
+        <label for="cat-input">Select Category: </label>
+        <select id="cat-input" required>
+          <option value="">Select Category</option>
+          <option value="1">Breakfast</option>
+          <option value="2">Canned Goods</option>
+          <option value="3">Fresh Foods</option>
+          <option value="4">Snacks</option>
+          <option value="5">Wellness</option>
+        </select>
+        <!-- <input id="name-input" name="name" type="text" pattern="[A-Z][a-z]+ [A-Z][a-z]+"
+          title="Please provide a name in &lt;First Last&gt format" required /> -->
+      </div>  
+    <div>
+        <label for="product-input">Product Name: </label>
+        <input id="product-input" name="product-name" type="text" title="Please provide a product name"required />
+      </div>
+      <div>
+        <label for="qty-input">Qty: </label>
+        <input id="qty-input" name="qty" type="number" min=0 required />
+      </div>
+      <div>
+        <label for="img-name">File Name: </label>
+        <input id="img-name" type="text" name="minutes" title="Please provide the name of your image file in &lt;example.jpg&gt; format"/>
+        <input id="img-file" type="file" name="img-file">
+      </div>
+      <button id="submit-btn" type="submit">Edit Product</button>
+    </form>
     </div>
   </main>
 
@@ -101,6 +131,13 @@
 
 
 <?php
+
+//COULD BE USED IN A METHOD TO RETRIEVE INFO FROM FORMS TO QUERY
+//if($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+//$pName = $_POST["productName"];
+//$quantity = $_POST["quantity"];
+//}
 
 require_once "../includes/config.php";
 
@@ -114,7 +151,7 @@ try {
   }
   
 
-  
+
   if(isset($categoryID))
   {$sql = "update product set quantity = $quantity where productName = $pName";}
 

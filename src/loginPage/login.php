@@ -3,10 +3,6 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 // print_r($_SESSION);
-if(isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES"){
-	// header("location: ../homePage/index.php");
-	exit;
-}
 require "loginMain.php";
 ?>
 
@@ -20,6 +16,14 @@ require "loginMain.php";
     <title>BlueJay Pantry Admin Login</title>
     <link rel="stylesheet" href="loginStyle.css">
 </head>
+
+<header>
+    <div class="home">
+        <a href="https://bluejaypantry.etowndb.com/" >
+            <img src="\docs\images\home-big.png" alt="home icon" height="75px">
+        </a>
+    </div>
+</header>
 
 <body>
     <div id="main">
