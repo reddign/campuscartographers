@@ -4,6 +4,13 @@ body {
     background-image: linear-gradient(to left, #000080, lightsteelblue);  
 }
 
+.home{
+    padding-left: 25px;
+    padding-top: 25px;
+    position: fixed;
+    color: #c8c8c8;
+}
+
 /* Main Div Attributes */ 
 #main {
     background-color: white;  
@@ -112,10 +119,6 @@ a:hover {
 /* Hidden Class */
 .hidden {
     display: none;
-}
-
-body {
-    margin: 0%;
 }
 
 @media only screen and (max-width: 400px) {
