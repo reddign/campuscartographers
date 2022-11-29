@@ -35,8 +35,8 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <div><a id="editInventory">Edit Inventory</a></div>
-        <div class=""><a href="AllFood.php">Reports</a></div>
+        <a href="\src\editinventory\edit.php">Edit Inventory</a>
+        <a href="AllFood.php">Reports</a>
             
         <!-- <button id="loginBtn" type="button" 
         style="position: absolute;
@@ -141,31 +141,6 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         </div>
     </form>
     </div>
-
-    <div id="editDiv" class="hidden">
-      <form class="editForm" action="" method="post">
-        <h2>Edit Inventory</h2>
-        <br>
-        <div>
-        <select id="dropdownCat">
-          <option value="">Select Category</option>
-          <option value="1">Breakfast</option>
-          <option value="2">Canned Goods</option>
-          <option value="3">Fresh Foods</option>
-          <option value="4">Snacks</option>
-          <option value="5">Wellness</option>
-        </select>
-        <br>
-        <select id="dropdownProd">
-          <option value="">Select Product</option>
-        </select>
-        <br>
-        <input type="number">
-        <br>
-        <button id="cancelBtn" type="submit">CANCEL</button>
-        <input id="submit" type="submit" value="submit">
-        </div>
-      </form>
     </div>
         
 </body>
