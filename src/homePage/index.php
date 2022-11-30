@@ -3,7 +3,6 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
-  echo $_SESSION["LoginStatus"];
   ?>
   <script>
     let adminTabs = document.getElementById("adminTabs");
@@ -47,10 +46,10 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
         <!-- Hidden Admin Tabs -->
-        <!-- <div id="adminTabs" class="hidden"> -->
+        <div id="adminTabs" class="hidden">
           <a href="\src\editinventory\edit.php">Edit Inventory</a>
           <a href="AllFood.php">Reports</a>
-          <a href="\src\loginPage\logout.php" color="red">Logout</a>
+          <a href="\src\loginPage\logout.php" id="logout">Logout</a>
         </div>
             
         <!-- <button id="loginBtn" type="button" 
