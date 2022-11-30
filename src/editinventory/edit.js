@@ -14,6 +14,7 @@ function init(){
 function showAdd(){
     let addElm = document.getElementById("add-form");
     addElm.classList.remove("hidden");
+
     let editElm = document.getElementById("edit-form");
     editElm.classList.add("hidden");
 }
@@ -21,6 +22,7 @@ function showAdd(){
 function showEdit(){
     let editElm = document.getElementById("edit-form");
     editElm.classList.remove("hidden");
+
     let addElm = document.getElementById("add-form");
     addElm.classList.add("hidden");
 }

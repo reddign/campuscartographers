@@ -80,16 +80,13 @@
         <input id="qty-input" name="qty" type="number" min=0 required />
       </div>
       <div>
-        <label for="img-name">File Name: </label>
-        <input id="img-name" type="text" name="minutes" title="Please provide the name of your image file in &lt;example.jpg&gt; format"/>
-        <input id="img-file" type="file" name="img-file">
+        <label for="img-file">File Name: </label>
+        <input id="img-file" type="file" name="img-file" title="Please provide the name of your image file in &lt;example.jpg&gt; format"/>
       </div>
       <!-- <textarea name="question" minlength=20 rows=5 required placeholder="Enter your question..."></textarea> -->
       <button id="submit-btn" type="submit">Add Product</button>
     </form>
-    <!-- <p id="results"></p>
-    <div id="queue">
-    </div> -->
+
 
     <form id = "edit-form" class="input-form hidden" method="POST">
     <div>
@@ -114,9 +111,8 @@
         <input id="qty-input" name="qty" type="number" min=0 required />
       </div>
       <div>
-        <label for="img-name">File Name: </label>
-        <input id="img-name" type="text" name="minutes" title="Please provide the name of your image file in &lt;example.jpg&gt; format"/>
-        <input id="img-file" type="file" name="img-file">
+        <label for="img-file">File Name: </label>
+        <input id="img-file" type="file" name="img-file" title="Please provide the name of your image file in &lt;example.jpg&gt; format"/>
       </div>
       <button id="submit-btn" type="submit">Edit Product</button>
     </form>
@@ -125,34 +121,50 @@
 
 
 </div>
-</body>
-</html>
+
 
 
 
 <?php
 
-//COULD BE USED IN A METHOD TO RETRIEVE INFO FROM FORMS TO QUERY
-//if($_SERVER["REQUEST_METHOD"] == "POST") {
-  // collect value of input field
-//$pName = $_POST["productName"];
-//$quantity = $_POST["quantity"];
-//}
+/* if (isset($_POST['submit']))
+{
+    if ((!isset($_POST['cat-input'])) || (!isset($_POST['product-name'])) || 
+    (!isset($_POST['qty'])) || (!isset($_POST['img-file'])))
+    {
+        $error = "*" . "Please fill all the required fields";
+    }
+    else
+    {
+        $catID = $_POST['cat-input'];
+        $pName = $_POST['product-name'];
+        $qty = $_POST['qty'];
+        if(isset($_POST["img-file"])) {$img = $_POST["img-file"];}
 
-require_once "../includes/config.php";
+        require_once "../includes/config.php";
 
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    //echo "Connected successfully";
-  } catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-  }
-  
+        try {
+            $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
+            // set the PDO error mode to exception
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //echo "Connected successfully";
+          } catch(PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+          }
+          
+        
+          if(edit is being used) {
+            $sql = "UPDATE product SET quantity = $qty WHERE productName = $pName";
+          }
 
+          if(add is being used){
+            $sql = "INSERT INTO product ('productID','productName','quantity', 'catID', 'img') 
+            VALUES (current greatest id + 1 , $pName, $qty, $catID, $img);"
+          }
 
-  if(isset($categoryID))
-  {$sql = "update product set quantity = $quantity where productName = $pName";}
+    }
+} */
 
 ?>
+</body>
+</html>
