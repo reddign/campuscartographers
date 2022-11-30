@@ -69,9 +69,9 @@
     color: red;
   }
 
-  /* #logout:hover{
-
-  } */
+  #logout:hover{
+    color: #3DB5E6;
+  }
 
   /* ALL Form Div Attributes */
   #cartDiv {

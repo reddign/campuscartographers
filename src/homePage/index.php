@@ -5,15 +5,16 @@ session_start();
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
   ?>
   <script>
+    console.log("Logged In!");
     let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.remove("hidden");
+    adminTabs.classList.toggle("hidden");
   </script>
   <?php
 } else {
   ?>
   <script>
     let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.add("hidden");
+    adminTabs.classList.toggle("hidden");
   </script>
   <?php
 }
@@ -46,7 +47,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
         <!-- Hidden Admin Tabs -->
-        <!-- <div id="adminTabs" class="hidden"> -->
+        <div id="adminTabs" class="hidden">
           <a href="\src\editinventory\edit.php">Edit Inventory</a>
           <a href="AllFood.php">Reports</a>
           <a href="\src\loginPage\logout.php" id="logout">Logout</a>
@@ -84,7 +85,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <div class="content">
         <?php 
 	    
-        require "../includes/config.php";
+        require_once "../includes/config.php";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
