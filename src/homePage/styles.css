@@ -64,6 +64,15 @@
     border-color: #0A2240;
   }
 
+  /* Logout Link Attributes */
+  #logout {
+    color: red;
+  }
+
+  #logout:hover{
+    color: #3DB5E6;
+  }
+
   /* ALL Form Div Attributes */
   #cartDiv {
     min-width: 600px;

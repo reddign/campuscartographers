@@ -2,23 +2,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
-  echo $_SESSION["LoginStatus"];
-  ?>
-  <script>
-    let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.remove("hidden");
-  </script>
-  <?php
-} else {
-  ?>
-  <script>
-    let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.add("hidden");
-  </script>
-  <?php
-}
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,18 +25,36 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
-        <a href="https://bluejaypantry.etowndb.com/">Home</a>
+        <a href="https://bluejaypantry.etowndb.com/src/homePage/index.php">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
         <!-- Hidden Admin Tabs -->
-        <!-- <div id="adminTabs" class="hidden"> -->
+        <div id="adminTabs" class="hidden">
           <a href="\src\editinventory\edit.php">Edit Inventory</a>
           <a href="AllFood.php">Reports</a>
-          <a href="\src\loginPage\logout.php" color="red">Logout</a>
+          <a href="\src\loginPage\logout.php" id="logout">Logout</a>
         </div>
-            
+
+        <?php
+        if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+        ?>
+          <script type="text/javascript">
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.remove("hidden");
+          </script>
+        <?php
+        } else {
+        ?>
+          <script type="text/javascript">
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.add("hidden");
+          </script>
+        <?php
+        }
+        ?> 
+
         <!-- <button id="loginBtn" type="button" 
         style="position: absolute;
         bottom: 70px;
@@ -84,8 +86,8 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
 
         <div class="content">
         <?php 
-	    
-        require "../includes/config.php";
+
+        require_once "../includes/config.php";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);

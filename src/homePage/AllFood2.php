@@ -1,7 +1,8 @@
-
-<!-- <?php
-// require_once "includes/database_functions.php";
-?> -->
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueJay Pantry</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Side navigation -->
@@ -23,45 +25,66 @@
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
-        <a href="https://bluejaypantry.etowndb.com/">Home</a>
+        <a href="https://bluejaypantry.etowndb.com/src/homePage/index.php">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
         <a href="\src\loginPage\login.php">Admin Login</a>
-        <a class="hidden" href="">Edit Inventory</a>
-        <a class="hidden" href="AllFood.php">Reports</a>
-            
-            <!-- <button id="loginBtn" type="button" 
-            style="position: absolute;
-            bottom: 70px;
-            left: 20px;
-            background-color: #004B98;
-            color: #c8c8c8;
-            padding: 5px;
-            font-weight: bold;
-            border-radius: 4px;
-            border-color: #004B98;" 
-            >Admin Login</button> -->
+        <!-- Hidden Admin Tabs -->
+        <div id="adminTabs" class="hidden">
+          <a href="\src\editinventory\edit.php">Edit Inventory</a>
+          <a href="AllFood.php">Reports</a>
+          <a href="\src\loginPage\logout.php" id="logout">Logout</a>
+        </div>
+
+        <?php
+        if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+        ?>
+          <script type="text/javascript">
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.remove("hidden");
+          </script>
+        <?php
+        } else {
+        ?>
+          <script type="text/javascript">
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.add("hidden");
+          </script>
+        <?php
+        }
+        ?> 
+
+        <!-- <button id="loginBtn" type="button" 
+        style="position: absolute;
+        bottom: 70px;
+        left: 20px;
+        background-color: #004B98;
+        color: #c8c8c8;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 4px;
+        border-color: #004B98;" 
+        >Admin Login</button> -->
         <!-- <a href="\src\loginPage\login.html">Edit Inventory</a> -->
     </div>
-  
+    
     <!-- Page content -->
     <div class="main">
         <div class="header">
             <a><img id="PantryLogo" src="\docs\images\BlueJayPantryLogo(1).png" height="150"></a> 
-            <a class="cartstyle" href="#"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
-        </div>
+            <a class="cartstyle"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
+        </div> 
         <div class="inventoryTabs">
-            <a class="tab" href="index.php?catID=1">Breakfast Foods</a>
-            <a class="tab" href="index.php?catID=2">Canned Goods</a>
-            <a class="tab" href="index.php?catID=3">Fresh Foods</a>
-            <a class="tab" href="index.php?catID=4">Snacks</a>
-            <a class="tab" href="index.php?catID=5">Wellness Products</a>
+            <a class="tab" href="/src/homePage/index.php?catID=1">Breakfast Foods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=2">Canned Goods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=3">Fresh Foods</a>
+            <a class="tab" href="/src/homePage/index.php?catID=4">Snacks</a>
+            <a class="tab" href="/src/homePage/index.php?catID=5">Wellness Products</a>
         </div>
+    </div>
 
-        <div class="content">
-
-
+        
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,23 +131,58 @@
 </head>
 <body>
 
-<h2>Total Orders With a Date</h2>
+<h2>Total Orders With a Date range</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Options</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="AllFood.php">Total Foods per type(Pie chart)</a>
-    <a href="AllFood1.php">Total Foods per type(Bar chart) </a>
-    <a href="AllFood2.php">Total Orders per day(Pie chart</a>
-    <a href="AllFood3.php">Total Orders per day(Bar chart)</a>
-    <a href="AllFood4.php">Total Orders with a range(Bar chart)</a>
+    <a href="AllFood1.php">Total Foods in Category per Type</a>
+    <a href="AllFood2.php">Total Orders per day with date range</a>
   </div>
 </div>
 
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Enter First date(YYYY-MM-DD): <input type="text" name="fname">
+  Enter second date(YYYY-MM-DD): <input type="text" name="fname2">
+  <input type="submit">
+</form>
+
 <?php
+
+function validateDate($date, $format = 'Y-m-d'){
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) === $date;
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $date1 = $_POST['fname'];
+    $date2 = $_POST['fname2'];
+    if ((validateDate($date1, 'Y-m-d')) && (validateDate($date2, 'Y-m-d'))) {
+        echo "Date from $date1 to $date2";
+    } else {
+        echo "Date is empty or Invalid";
+        $date1 = NULL; 
+        $date2 = NULL;
+    }
+}
+?>
+
+</body>
+</html>
+
+
+<?php 
  $con = mysqli_connect('156.67.74.51','u413142534_bluejay','Xdr341Food','u413142534_pantry');
 ?>
+
+
 
 <html>
 <head>
@@ -137,16 +195,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
  google.load("visualization", "1", {packages:["corechart"]});
- google.setOnLoadCallback(drawChart);
+ google.setOnLoadCallback(drawChart); 
  function drawChart() {
  var data = google.visualization.arrayToDataTable([
 
- ['Total Amount','CategoryID'],
+    
+
+ ['Total Amount','Amount of orders'],
+
  <?php 
+            
 			$query = "select basketDate, COUNT(basketDate) total
             from Basket
+            where basketDate BETWEEN '$date1' and '$date2'
             GROUP BY basketDate;";
-
 			 $exec = mysqli_query($con,$query);
 			 while($row = mysqli_fetch_array($exec)){
 
@@ -157,12 +219,12 @@
  ]);
 
  
- var chart = new google.visualization.PieChart(document.getElementById("Bar"));
- chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Ordered Food that Day'});
+ var chart = new google.visualization.BarChart(document.getElementById("Bar"));
+ chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Orders on specific dates'});
  
  }
 	
-    </script>
+   </script>
 
 </head>
 <body>
@@ -195,6 +257,33 @@ window.onclick = function(event) {
 }
 </script>
 
+</body>
+</html>
+
+
+
+    <!-- Cart Form -->    
+    <div id="cartDiv" class="hidden">
+    <form id="cartForm" action="" method="post">
+        <h2>Your Pantry Cart</h2>
+        <BR>
+        <hr>
+        <div>
+            <img src="../../docs/images/cannedgoodsTest.jpg" height="100px" width="100px">
+            <label>Beans </label>
+            <label for="qty">Qty: </label>
+            <input id="qty" type="number" width="20px" min="0" max="10" placeholder="0">
+            <label> In stock: 20</label>
+        </div>
+        <hr>
+        <div>
+        <button class="cancelBtn" type="submit">CANCEL</button>
+        <button class="submitBtn" type="submit">CHECKOUT</button>
+        </div>
+    </form>
+    </div>
+    </div>
+        
 </body>
 </html>
 
