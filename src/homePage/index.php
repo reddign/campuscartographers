@@ -2,7 +2,6 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-include "script.php";
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
   ?>
   <script type="text/javascript">
@@ -29,7 +28,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueJay Pantry</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </head>
 <body>
     <!-- Side navigation -->
