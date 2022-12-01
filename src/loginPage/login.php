@@ -19,7 +19,7 @@ require "loginMain.php";
 
 <header>
     <div class="home">
-        <a href="https://bluejaypantry.etowndb.com/" >
+        <a href="hhttps://bluejaypantry.etowndb.com/src/homePage/index.php">
             <img src="\docs\images\home-big.png" alt="home icon" height="75px">
         </a>
     </div>
