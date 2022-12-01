@@ -70,7 +70,6 @@ session_start();
     </div>
     
     <!-- Page content -->
-    <div class="main">
         <div class="header">
             <a><img id="PantryLogo" src="\docs\images\BlueJayPantryLogo(1).png" height="150"></a> 
             <a class="cartstyle"><img id="cart" src="\docs\images\shopping-cart.png" height="75"></a>
@@ -82,7 +81,6 @@ session_start();
             <a class="tab" href="/src/homePage/index.php?catID=4">Snacks</a>
             <a class="tab" href="/src/homePage/index.php?catID=5">Wellness Products</a>
         </div>
-    </div>
 
         
 
@@ -107,6 +105,7 @@ session_start();
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-left: 230px;
 }
 
 .dropdown-content {
@@ -133,8 +132,8 @@ session_start();
 </head>
 <body>
 
-<h2>Total Food Grabbed From Category</h2>
-<p>Choose a Graph option</p>
+<h2 style="padding-left: 230px">Total Food Grabbed From Category</h2>
+<p style="padding-left: 230px">Choose a Graph option</p>
 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Options</button>
@@ -149,12 +148,12 @@ session_start();
 <html>
 <body>
 
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" style="padding-left: 230px">
  Enter a Category ID(1-5): <input type="number" name="category" min="1" max="5">
  
-  <input type="submit">
+  <input type="submit" >
 </form>
-1- Breakfast Foods | 2- Canned Goods | 3- Fresh Foods | 4- Snacks | 5- Wellness Products
+<p style="padding-left: 230px">1- Breakfast Foods | 2- Canned Goods | 3- Fresh Foods | 4- Snacks | 5- Wellness Products</p>
 <br>
 
 <?php
@@ -225,7 +224,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
  <div class="container-fluid">
- <div id="Bar" style="width: 100%; height: 500px;"></div>
+ <div id="Bar" style="width: 100%; height: 500px; padding-left: 230px;"></div>
  </div>
 
 </body>

@@ -105,6 +105,7 @@ session_start();
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-left: 230px;
 }
 
 .dropdown-content {
@@ -142,7 +143,6 @@ session_start();
     <a href="AllFood2.php">Total Orders per day with date range</a>
   </div>
 </div>
-
 
 <?php
  $con = mysqli_connect('156.67.74.51','u413142534_bluejay','Xdr341Food','u413142534_pantry');

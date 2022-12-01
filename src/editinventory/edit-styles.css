@@ -102,6 +102,8 @@ body {
   }
 
   #edit-add{
-    margin: auto;
+    position:fixed;
+    left: 43%;
+    top: 20%;
   }
   

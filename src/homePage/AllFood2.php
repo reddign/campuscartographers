@@ -105,6 +105,7 @@ session_start();
 .dropdown {
   position: relative;
   display: inline-block;
+  padding-left: 230px;
 }
 
 .dropdown-content {
@@ -131,8 +132,8 @@ session_start();
 </head>
 <body>
 
-<h2>Total Orders With a Date range</h2>
-<p>Choose a Graph option</p>
+<h2 style="padding-left: 230px">Total Orders With a Date range</h2>
+<p style="padding-left: 230px">Choose a Graph option</p>
 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Options</button>
@@ -141,7 +142,6 @@ session_start();
     <a href="AllFood1.php">Total Foods in Category per Type</a>
     <a href="AllFood2.php">Total Orders per day with date range</a>
   </div>
-</div>
 
 <html>
 <body>
@@ -151,7 +151,7 @@ session_start();
   Enter second date(YYYY-MM-DD): <input type="text" name="fname2">
   <input type="submit">
 </form>
-
+</div>
 <?php
 
 function validateDate($date, $format = 'Y-m-d'){
@@ -229,7 +229,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
  <div class="container-fluid">
- <div id="Bar" style="width: 100%; height: 500px;"></div>
+ <div id="Bar" style="width: 100%; height: 500px; padding-left: 230px;"></div>
  </div>
 
 </body>
