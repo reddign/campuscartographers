@@ -7,8 +7,8 @@ function init() {
     // let addBtns = document.querySelectorAll(".addCart");
     // addBtns.addEventListener('click', addCart);
 
-    let editTag = document.getElementById('editInventory');
-    editTag.addEventListener('click', editQty);
+    // let editTag = document.getElementById('editInventory');
+    // editTag.addEventListener('click', editQty);
 }
 
 function showCart() { 

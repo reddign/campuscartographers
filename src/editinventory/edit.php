@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +16,7 @@
 </head>
 <body>
 <div class="home">
-        <a href="https://bluejaypantry.etowndb.com/" >
+        <a href="https://bluejaypantry.etowndb.com/src/homePage/index.php" >
             <img src="\docs\images\home-big.png" alt="home icon" height="75px">
         </a>
 </div>

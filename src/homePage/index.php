@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 1);
-// error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 ?>
 
@@ -25,7 +25,7 @@ session_start();
         <a href="#">Snacks</a>
         <a href="#">Wellness Products</a> -->
         
-        <a href="https://bluejaypantry.etowndb.com/">Home</a>
+        <a href="https://bluejaypantry.etowndb.com/src/homePage/index.php">Home</a>
         <a href="\src\about\about.html">About</a>
         <a href="\src\contact\contact.html">Contact</a>
         <a href="\src\contributors\team.html">Our Team</a>
