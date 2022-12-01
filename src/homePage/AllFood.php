@@ -113,11 +113,8 @@
   <button onclick="myFunction()" class="dropbtn">Options</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="AllFood.php">Total Foods per type(Pie chart)</a>
-    <a href="AllFood1.php">Total Foods per type(Bar chart) </a>
-    <a href="AllFood2.php">Total Orders per day(Pie chart</a>
-    <a href="AllFood3.php">Total Orders per day(Bar chart)</a>
-    <a href="AllFood4.php">Total Orders with a range(Bar chart)</a>
-
+    <a href="AllFood1.php">Total Foods in Category per Type</a>
+    <a href="AllFood2.php">Total Orders per day with date range</a>
   </div>
 </div>
 
@@ -165,7 +162,7 @@
 
  
  
- var chart = new google.visualization.PieChart(document.getElementById("Bar"));
+ var chart = new google.visualization.BarChart(document.getElementById("Bar"));
  chart.draw(data, {width: 1000, height: 540, color: 'red', is3D: true, title: 'Total Food Grabbed'});
  
  }

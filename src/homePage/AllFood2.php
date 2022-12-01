@@ -108,23 +108,58 @@
 </head>
 <body>
 
-<h2>Total Orders With a Date</h2>
+<h2>Total Orders With a Date range</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Options</button>
   <div id="myDropdown" class="dropdown-content">
     <a href="AllFood.php">Total Foods per type(Pie chart)</a>
-    <a href="AllFood1.php">Total Foods per type(Bar chart) </a>
-    <a href="AllFood2.php">Total Orders per day(Pie chart</a>
-    <a href="AllFood3.php">Total Orders per day(Bar chart)</a>
-    <a href="AllFood4.php">Total Orders with a range(Bar chart)</a>
+    <a href="AllFood1.php">Total Foods in Category per Type</a>
+    <a href="AllFood2.php">Total Orders per day with date range</a>
   </div>
 </div>
 
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Enter First date(YYYY-MM-DD): <input type="text" name="fname">
+  Enter second date(YYYY-MM-DD): <input type="text" name="fname2">
+  <input type="submit">
+</form>
+
 <?php
+
+function validateDate($date, $format = 'Y-m-d'){
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) === $date;
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $date1 = $_POST['fname'];
+    $date2 = $_POST['fname2'];
+    if ((validateDate($date1, 'Y-m-d')) && (validateDate($date2, 'Y-m-d'))) {
+        echo "Date from $date1 to $date2";
+    } else {
+        echo "Date is empty or Invalid";
+        $date1 = NULL; 
+        $date2 = NULL;
+    }
+}
+?>
+
+</body>
+</html>
+
+
+<?php 
  $con = mysqli_connect('156.67.74.51','u413142534_bluejay','Xdr341Food','u413142534_pantry');
 ?>
+
+
 
 <html>
 <head>
@@ -137,16 +172,20 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
  <script type="text/javascript">
  google.load("visualization", "1", {packages:["corechart"]});
- google.setOnLoadCallback(drawChart);
+ google.setOnLoadCallback(drawChart); 
  function drawChart() {
  var data = google.visualization.arrayToDataTable([
 
- ['Total Amount','CategoryID'],
+    
+
+ ['Total Amount','Amount of orders'],
+
  <?php 
+            
 			$query = "select basketDate, COUNT(basketDate) total
             from Basket
+            where basketDate BETWEEN '$date1' and '$date2'
             GROUP BY basketDate;";
-
 			 $exec = mysqli_query($con,$query);
 			 while($row = mysqli_fetch_array($exec)){
 
@@ -157,12 +196,12 @@
  ]);
 
  
- var chart = new google.visualization.PieChart(document.getElementById("Bar"));
- chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Ordered Food that Day'});
+ var chart = new google.visualization.BarChart(document.getElementById("Bar"));
+ chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Orders on specific dates'});
  
  }
 	
-    </script>
+   </script>
 
 </head>
 <body>

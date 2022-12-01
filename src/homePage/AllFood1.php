@@ -108,23 +108,51 @@
 </head>
 <body>
 
-<h2>Total Food Grabbed</h2>
+<h2>Total Food Grabbed From Category</h2>
 <p>Choose a Graph option</p>
 
 <div class="dropdown">
   <button onclick="myFunction()" class="dropbtn">Options</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="AllFood.php">Total Foods per type(Pie chart)</a>
-    <a href="AllFood1.php">Total Foods per type(Bar chart) </a>
-    <a href="AllFood2.php">Total Orders per day(Pie chart</a>
-    <a href="AllFood3.php">Total Orders per day(Bar chart)</a>
-    <a href="AllFood4.php">Total Orders with a range(Bar chart)</a>
+    <a href="AllFood.php">Total Foods per type</a>
+    <a href="AllFood1.php">Total Foods in Category per Type</a>
+    <a href="AllFood2.php">Total Orders per day with date range</a>
   </div>
 </div>
 
+
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+ Enter a Category ID(1-5): <input type="number" name="category" min="1" max="5">
+ 
+  <input type="submit">
+</form>
+1- Breakfast Foods | 2- Canned Goods | 3- Fresh Foods | 4- Snacks | 5- Wellness Products
+<br>
+
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $catID = $_POST['category'];
+    if (empty($catID)) {
+        echo "ID is empty";
+    } else {
+        echo "Category ID = $catID";
+    }
+}
+?>
+
+</body>
+</html>
+
+
+<?php 
  $con = mysqli_connect('156.67.74.51','u413142534_bluejay','Xdr341Food','u413142534_pantry');
 ?>
+
+
 
 <html>
 <head>
@@ -132,24 +160,26 @@
  <title>TechJunkGigs</title>
  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="test.js"></script>
  <script type="text/javascript">
  google.load("visualization", "1", {packages:["corechart"]});
- google.setOnLoadCallback(drawChart);
+ google.setOnLoadCallback(drawChart); 
  function drawChart() {
  var data = google.visualization.arrayToDataTable([
 
- ['Total Amount','Food Grabbed'],
- <?php 
-			$query = "select P.productName, COUNT(BI.basketID) total
-      from product P,
-      BasketItem BI
-      where P.productID = BI.productID 
-      GROUP BY P.productName;";
+    
 
+ ['Total Amount For Each Product','Product Types'],
+
+ <?php 
+            
+			$query = "select P.productName, COUNT(BI.basketID) total
+            from product P,
+            BasketItem BI
+            where P.productID = BI.productID and catID = $catID
+            GROUP BY P.productName";
 			 $exec = mysqli_query($con,$query);
 			 while($row = mysqli_fetch_array($exec)){
 
@@ -161,11 +191,11 @@
 
  
  var chart = new google.visualization.BarChart(document.getElementById("Bar"));
- chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Total Food Grabbed'});
+ chart.draw(data, {width: 1000, height: 540, is3D: true, title: 'Products Grabbed Within A Category'});
  
  }
 	
-    </script>
+   </script>
 
 </head>
 <body>
