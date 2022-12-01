@@ -3,6 +3,22 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 include "script.php";
+if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+  ?>
+  <script type="text/javascript">
+    console.log("Logged In!");
+    let adminTabs = document.getElementById("adminTabs");
+    adminTabs.classList.remove("hidden");
+  </script>
+  <?php
+} else {
+  ?>
+  <script type="text/javascript">
+    let adminTabs = document.getElementById("adminTabs");
+    adminTabs.classList.add("hidden");
+  </script>
+  <?php
+}
 ?> 
 
 <!DOCTYPE html>
