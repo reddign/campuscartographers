@@ -1,7 +1,3 @@
-<!-- <?php
-// require_once "includes/database_functions.php";
-?> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
