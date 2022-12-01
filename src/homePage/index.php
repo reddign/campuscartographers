@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', 1);
-error_reporting(E_ALL & ~E_NOTICE);
+// error_reporting(E_ALL & ~E_NOTICE);
 session_start();
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
   ?>
@@ -13,6 +13,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
 } else {
   ?>
   <script type="text/javascript">
+    console.log("Not Logged In!")
     let adminTabs = document.getElementById("adminTabs");
     adminTabs.classList.add("hidden");
   </script>
