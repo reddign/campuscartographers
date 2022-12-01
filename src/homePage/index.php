@@ -2,24 +2,7 @@
 ini_set('display_errors', 1);
 // error_reporting(E_ALL & ~E_NOTICE);
 session_start();
-if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
-  ?>
-  <script type="text/javascript">
-    console.log("Logged In!");
-    let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.remove("hidden");
-  </script>
-  <?php
-} else {
-  ?>
-  <script type="text/javascript">
-    console.log("Not Logged In!")
-    let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.add("hidden");
-  </script>
-  <?php
-}
-?> 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +36,25 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
           <a href="AllFood.php">Reports</a>
           <a href="\src\loginPage\logout.php" id="logout">Logout</a>
         </div>
-            
+
+        <?php
+        if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+        ?>
+          <script type="text/javascript">
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.remove("hidden");
+          </script>
+        <?php
+        } else {
+        ?>
+          <script type="text/javascript">
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.add("hidden");
+          </script>
+        <?php
+        }
+        ?> 
+
         <!-- <button id="loginBtn" type="button" 
         style="position: absolute;
         bottom: 70px;
