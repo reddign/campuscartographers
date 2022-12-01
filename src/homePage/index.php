@@ -2,19 +2,21 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL & ~E_NOTICE);
 session_start();
+include "../includes/config.php";
+include "script.php";
 if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
   ?>
-  <script>
+  <script type="text/javascript">
     console.log("Logged In!");
     let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.toggle("hidden");
+    adminTabs.classList.remove("hidden");
   </script>
   <?php
 } else {
   ?>
-  <script>
+  <script type="text/javascript">
     let adminTabs = document.getElementById("adminTabs");
-    adminTabs.classList.toggle("hidden");
+    adminTabs.classList.add("hidden");
   </script>
   <?php
 }
@@ -28,7 +30,7 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueJay Pantry</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </head>
 <body>
     <!-- Side navigation -->
@@ -84,8 +86,6 @@ if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
 
         <div class="content">
         <?php 
-	    
-        require_once "../includes/config.php";
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
