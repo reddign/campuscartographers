@@ -1,3 +1,9 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL & ~E_NOTICE);
+session_start();
+?>
+
 <script type="text/javascript">
     window.addEventListener("load", init);
 
@@ -10,6 +16,22 @@
 
         let editTag = document.getElementById('editInventory');
         editTag.addEventListener('click', editQty);
+
+        <?php 
+        if (isset($_SESSION["LoginStatus"]) && $_SESSION["LoginStatus"]== "YES") {
+        ?>
+            console.log("Logged In!");
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.remove("hidden");
+        <?php
+        } else {
+        ?>
+            console.log("Not Logged In!")
+            let adminTabs = document.getElementById("adminTabs");
+            adminTabs.classList.add("hidden");
+        <?php
+        }
+        ?>
     }
 
     function showCart() { 
